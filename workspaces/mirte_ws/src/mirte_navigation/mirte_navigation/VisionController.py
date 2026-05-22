@@ -18,13 +18,24 @@ INIT_SCAN
   TRACKING, just as it would in SEARCHING.
 
 EXPLORE sub-states (executed in order)
-  LEFT         – strafe left for one step
-  LEFT_ALIGN   – stop and rotate until camera is centred on target
-  RIGHT        – strafe right two steps (left → centre → right)
-  RIGHT_ALIGN  – stop and rotate until camera is centred on target
-  DECIDE       – compare bbox areas; choose best lateral position
-  RETURN_*     – strafe back to the chosen position
-  FINAL_ALIGN  – rotate until camera is centred; then → DONE
+  LEFT           – strafe left for one step
+  LEFT_ALIGN     – stop and rotate until camera is centred; record left_size
+  RIGHT          – strafe right two steps (left → centre → right)
+  RIGHT_ALIGN    – stop and rotate until camera is centred; record right_size
+  DECIDE         – compare bbox areas; choose best lateral position:
+                     • centre won  → RETURN_CENTER → FINAL_ALIGN → DONE
+                     • left won    → RETURN_LEFT   → RECENTER_ALIGN → restart
+                     • right won   → RECENTER_ALIGN (already there) → restart
+  RETURN_CENTER  – strafe right one step back to centre; then FINAL_ALIGN
+  RETURN_LEFT    – strafe left two steps (right → centre → left); then RECENTER_ALIGN
+  RECENTER_ALIGN – re-align camera at the new centre position, record fresh
+                   best_size, then restart from LEFT (loop continues until
+                   centre wins)
+  FINAL_ALIGN    – rotate until camera is centred; then → DONE
+
+The EXPLORE loop therefore keeps shifting the "centre" toward the direction
+with the largest bounding box on every iteration.  It terminates only when
+the centre position scores higher than both neighbours.
 
 Subscriptions
   /target_angle  (std_msgs/String)    – JSON {"angle": float, "bbox_area": float}
@@ -73,13 +84,13 @@ CRAB_SPEED: float = 0.05
 # Duration of a single EXPLORE lateral step (s); two steps = full sweep
 CRAB_STEP_DURATION: float = 2.0
 
-# Angle tolerance used to decide "camera is centred" during EXPLORE (rad)
+# Angle tolerance for "camera is centred" checks (rad)
 ALIGN_TOLERANCE: float = math.radians(1)
 
-# Angular speed used during the initial 360 ° scan (rad/s).
-# A full revolution takes  2π / INIT_SCAN_ANGULAR  seconds.
+# Angular speed and total duration of the initial 360 ° scan
 INIT_SCAN_ANGULAR: float = 0.1
-INIT_SCAN_DURATION: float = 2 * math.pi / INIT_SCAN_ANGULAR 
+INIT_SCAN_DURATION: float = 2 * math.pi / INIT_SCAN_ANGULAR
+
 
 # ---------------------------------------------------------------------------
 # Node
@@ -92,9 +103,9 @@ class VisionController(Node):
     The robot first rotates a full 360 ° in place (INIT_SCAN) to check for
     any target already visible before beginning the outward search spiral.
     Once a target is found it drives toward it, then performs a short lateral
-    scan (left / right) to find the viewpoint with the largest bounding box.
-    The camera is re-centred between lateral steps so that bbox-area readings
-    are taken from a consistent heading.
+    scan (EXPLORE) that repeats until the centre position yields the largest
+    bounding-box area (i.e. the robot has found its optimal viewing angle).
+    The camera is re-centred at every measurement point for consistency.
     """
 
     # -- Lifecycle -----------------------------------------------------------
@@ -102,7 +113,7 @@ class VisionController(Node):
     def __init__(self) -> None:
         super().__init__("vision_controller")
 
-        # ── Publishers ──────────────────────────────────────────────────────
+        # ── Publishers ───────────────────────────────────────────────────────
         self.cmd_pub = self.create_publisher(
             Twist,
             "/mirte_base_controller/cmd_vel_unstamped",
@@ -111,11 +122,11 @@ class VisionController(Node):
 
         self.state_pub = self.create_publisher(
             String,
-            '/state_change',
-            10
+            "/state_change",
+            10,
         )
 
-        # ── Subscribers ─────────────────────────────────────────────────────
+        # ── Subscribers ──────────────────────────────────────────────────────
         self.create_subscription(
             String,
             "/target_angle",
@@ -130,11 +141,11 @@ class VisionController(Node):
             10,
         )
 
-        self.state_sub = self.create_subscription(
+        self.create_subscription(
             String,
             "/robot_state",
-            self.state_callback,
-            10
+            self._state_callback,
+            10,
         )
 
         # ── Sensor / detection state ─────────────────────────────────────────
@@ -163,25 +174,25 @@ class VisionController(Node):
         self.search_expand_rate: float = 0.05   # decay    (rad/s per second)
 
         # ── Finite-state machine ─────────────────────────────────────────────
-        # Start with the initial 360 ° scan before any forward searching.
         self.mode: str = "INIT_SCAN"
-        self.init_scan_start: float = time.time()  # epoch when INIT_SCAN began
-        self.search_start: float = 0.0             # epoch when SEARCHING began
-        self.recovery_start: float | None = None   # epoch when RECOVERY began
-        self.state = "IDLE"
-        self.get_logger().info("State → INIT_SCAN  (performing 360 ° sweep)")
+        self.init_scan_start: float = time.time()
+        self.search_start: float = 0.0
+        self.recovery_start: float | None = None
+        self.robot_state: str = "IDLE"          # latest value from /robot_state
+        self.get_logger().info("Mode → INIT_SCAN  (performing 360 ° sweep)")
 
         # ── EXPLORE sub-state ────────────────────────────────────────────────
         self.explore_mode: str | None = None  # current EXPLORE sub-state
         self.explore_start: float = 0.0       # epoch of current sub-state start
-        self.best_size: float = 0.0           # bbox area at the starting position
+        self.best_size: float = 0.0           # bbox area at current centre
         self.left_size: float = 0.0           # bbox area measured at left step
         self.right_size: float = 0.0          # bbox area measured at right step
+        self._explore_iteration: int = 0      # counts EXPLORE restarts (for logging)
 
         # ── Main control loop (10 Hz) ────────────────────────────────────────
         self.create_timer(0.1, self._control_loop)
 
-    # -- Mode helper ---------------------------------------------------------
+    # -- Mode helpers --------------------------------------------------------
 
     def _set_mode(self, new_mode: str, extra: str = "") -> None:
         """
@@ -192,15 +203,32 @@ class VisionController(Node):
         new_mode:
             Target state name (e.g. ``"TRACKING"``).
         extra:
-            Optional context appended to the log message
-            (e.g. a distance reading or sub-state name).
+            Optional context appended to the log message.
         """
         if new_mode == self.mode:
-            return  # no-op – already in that state
-
+            return
         suffix = f"  ({extra})" if extra else ""
-        self.get_logger().info(f"State  {self.mode}  →  {new_mode}{suffix}")
+        self.get_logger().info(f"Mode  {self.mode}  →  {new_mode}{suffix}")
         self.mode = new_mode
+
+    def _set_explore(self, sub: str, log: str = "") -> None:
+        """
+        Transition the EXPLORE sub-state, reset the sub-state timer, and log.
+
+        Parameters
+        ----------
+        sub:
+            Target EXPLORE sub-state name.
+        log:
+            Optional context string appended to the log message.
+        """
+        suffix = f"  – {log}" if log else ""
+        self.get_logger().info(
+            f"EXPLORE [{self._explore_iteration}]  "
+            f"{self.explore_mode}  →  {sub}{suffix}"
+        )
+        self.explore_mode = sub
+        self.explore_start = time.time()
 
     # -- Callbacks -----------------------------------------------------------
 
@@ -208,22 +236,21 @@ class VisionController(Node):
         """
         Receive the latest detection from the vision pipeline.
 
-        The message is a JSON string with fields:
-          ``angle``     – horizontal angle to target centre (rad)
-          ``bbox_area`` – bounding-box pixel area (proxy for proximity/angle)
-
-        A positive angle means the target is to the left; negative to the right.
+        JSON fields
+        ───────────
+          angle     – horizontal angle to target centre (rad);
+                      positive = target is LEFT of image centre
+          bbox_area – bounding-box pixel area (grows as robot gets closer)
         """
         data = json.loads(msg.data)
         angle: float = data["angle"]
 
         self.target_angle = angle
-        self.last_angle = angle           # remember for RECOVERY rotation direction
+        self.last_angle = angle
         self.last_detection_time = time.time()
         self.target_size = data["bbox_area"]
 
-        # Switch to TRACKING from search/scan/recovery states; never interrupt
-        # EXPLORE or DONE with an incoming detection.
+        # Never interrupt an ongoing EXPLORE or a completed task
         if self.mode not in ("EXPLORE", "DONE"):
             self._set_mode("TRACKING", "target detected")
 
@@ -238,17 +265,16 @@ class VisionController(Node):
         for r in msg.ranges:
             in_front = -FRONT_CONE_HALF_ANGLE < angle < FRONT_CONE_HALF_ANGLE
             valid = math.isfinite(r) and r > LIDAR_MIN_RANGE
-
             if valid and in_front:
                 front_readings.append(r)
-
             angle += msg.angle_increment
 
         self.front_distance = min(front_readings) if front_readings else float("inf")
 
-    def state_callback(self,msg):
-        self.state = msg.data
-    
+    def _state_callback(self, msg: String) -> None:
+        """Track the current robot state published by StateManager."""
+        self.robot_state = msg.data
+
     # -- Control loop --------------------------------------------------------
 
     def _control_loop(self) -> None:
@@ -256,24 +282,27 @@ class VisionController(Node):
         10 Hz state-machine tick.
 
         State priority (highest first):
-          DONE      – task finished; robot stopped
+          DONE      – task finished; robot stopped; DONE published upstream
           RECOVERY  – brief reverse then spin toward last known angle
           INIT_SCAN – one full 360 ° rotation before the outward spiral
           SEARCHING – forward spiral until a target appears
-          EXPLORE   – lateral scan with camera realignment between steps
+          EXPLORE   – iterative lateral scan with realignment (repeats until
+                      centre position wins)
           TRACKING  – proportional angular + forward drive toward target
         """
-        cmd = Twist()  # default: all zeros (stop)
+        cmd = Twist()
         time_since_seen = time.time() - self.last_detection_time
-        if self.state != "TRACK_WHITEBOARD":
+
+        # Gate: only act when the state manager says it's our turn
+        if self.robot_state != "TRACK_WHITEBOARD":
             return
 
         # ── DONE ─────────────────────────────────────────────────────────────
         if self.mode == "DONE":
-            self.cmd_pub.publish(Twist())  # ensure robot is stopped
-            done = String()
-            done.data = self.mode
-            self.state_pub.publish(done)
+            self.cmd_pub.publish(Twist())
+            done_msg = String()
+            done_msg.data = "DONE"
+            self.state_pub.publish(done_msg)
             return
 
         # ── Transition: TRACKING → RECOVERY on detection timeout ─────────────
@@ -286,15 +315,10 @@ class VisionController(Node):
             elapsed = time.time() - self.recovery_start
 
             if elapsed < 1.0:
-                # Phase 1: reverse briefly to regain manoeuvrability
-                cmd.linear.x = -0.1
-
+                cmd.linear.x = -0.1                          # phase 1: reverse
             elif elapsed < 3.0:
-                # Phase 2: rotate toward the direction the target was last seen
-                cmd.angular.z = 0.4 if self.last_angle > 0 else -0.4
-
+                cmd.angular.z = 0.4 if self.last_angle > 0 else -0.4  # phase 2: spin
             else:
-                # Phase 3: recovery failed – start a fresh search
                 self.search_start = time.time()
                 self._set_mode("SEARCHING", "recovery timed out")
 
@@ -302,7 +326,10 @@ class VisionController(Node):
             return
 
         # ── Transition: non-EXPLORE state → SEARCHING on detection timeout ────
-        if self.mode not in ("EXPLORE", "DONE", "INIT_SCAN") and time_since_seen > self.target_timeout:
+        if (
+            self.mode not in ("EXPLORE", "DONE", "INIT_SCAN")
+            and time_since_seen > self.target_timeout
+        ):
             self.search_start = time.time()
             self._set_mode("SEARCHING", "detection timeout")
 
@@ -311,15 +338,11 @@ class VisionController(Node):
             elapsed = time.time() - self.init_scan_start
 
             if elapsed >= INIT_SCAN_DURATION:
-                # Full revolution complete with no detection → begin spiral search
                 self.search_start = time.time()
                 self._set_mode("SEARCHING", "360 ° sweep complete, no target found")
             else:
-                # Spin in place at a constant angular rate
-                remaining = INIT_SCAN_DURATION - elapsed
                 self.get_logger().debug(
-                    f"INIT_SCAN: {math.degrees(INIT_SCAN_ANGULAR * elapsed):.0f} ° "
-                    f"/ 360 °  ({remaining:.1f} s remaining)"
+                    f"INIT_SCAN: {math.degrees(INIT_SCAN_ANGULAR * elapsed):.0f} ° / 360 °"
                 )
                 cmd.angular.z = INIT_SCAN_ANGULAR
                 self.cmd_pub.publish(cmd)
@@ -328,11 +351,8 @@ class VisionController(Node):
         # ── SEARCHING ────────────────────────────────────────────────────────
         if self.mode == "SEARCHING":
             t = time.time() - self.search_start
-
-            # Angular speed decays so the search spiral gradually widens
             angular = self.search_angular_start - self.search_expand_rate * t
             angular = max(angular, self.search_angular_min)
-
             cmd.linear.x = self.search_linear
             cmd.angular.z = angular
             self.cmd_pub.publish(cmd)
@@ -340,16 +360,19 @@ class VisionController(Node):
 
         # ── Guard: no valid detection yet ────────────────────────────────────
         if self.target_angle is None:
-            self.cmd_pub.publish(cmd)  # publish zero-velocity (safe default)
+            self.cmd_pub.publish(cmd)
             return
 
         angle_error = self.target_angle
 
         # ── Transition: TRACKING → EXPLORE when target is close enough ────────
         if self.mode == "TRACKING" and self.front_distance < self.stop_distance:
+            self._explore_iteration = 0
             self.explore_mode = "LEFT"
             self.explore_start = time.time()
             self.best_size = self.target_size
+            self.left_size = 0.0
+            self.right_size = 0.0
             self._set_mode(
                 "EXPLORE",
                 f"distance {self.front_distance:.2f} m < {self.stop_distance} m",
@@ -362,10 +385,8 @@ class VisionController(Node):
 
         # ── TRACKING: steer and drive toward target ───────────────────────────
         if abs(angle_error) > self.angle_threshold:
-            # Angle too large to drive safely – rotate in place first
             cmd.angular.z = _clamp(ANGLE_KP * angle_error, MAX_ANGULAR)
         else:
-            # Angle small – drive forward with a gentle steering correction
             cmd.linear.x = TRACK_LINEAR
             cmd.angular.z = _clamp(ANGLE_KP * angle_error, MAX_ANGULAR * 2 / 3)
 
@@ -375,98 +396,121 @@ class VisionController(Node):
 
     def _run_explore(self, cmd: Twist, angle_error: float) -> None:
         """
-        Execute one tick of the EXPLORE lateral-scan sequence.
+        Execute one tick of the iterative EXPLORE lateral-scan sequence.
 
-        The full sequence visits three positions – left, centre, right – and
-        re-centres the camera on the target at each measurement point before
-        recording the bbox area.  After the sweep the robot returns to the
-        position that gave the largest bbox area (i.e. best viewing angle)
-        and re-centres one final time before transitioning to DONE.
+        The sequence performs a left / right sweep from the current centre
+        position, re-centring the camera at each measurement point for a
+        consistent comparison.  If the centre does not win, the robot moves
+        to the winning position, re-aligns (RECENTER_ALIGN), records a fresh
+        best_size for that new centre, and restarts the sweep.  This repeats
+        until the centre position scores higher than both neighbours.
 
-        Position reference (all relative to where EXPLORE was entered):
+        Position reference (relative to current "centre"):
           centre  0
-          left   –1 step   (one CRAB_STEP_DURATION of –y movement)
-          right  +1 step   (one CRAB_STEP_DURATION of +y movement)
+          left   -1 step  (CRAB_STEP_DURATION at -y)
+          right  +1 step  (CRAB_STEP_DURATION at +y)
 
         Sub-state sequence
         ──────────────────
-          LEFT          strafe –y for 1 × CRAB_STEP_DURATION
-          LEFT_ALIGN    rotate until |angle_error| < ALIGN_TOLERANCE; record left_size
-          RIGHT         strafe +y for 2 × CRAB_STEP_DURATION  (left→centre→right)
-          RIGHT_ALIGN   rotate until |angle_error| < ALIGN_TOLERANCE; record right_size
-          DECIDE        compare sizes; choose return sub-state
-          RETURN_CENTER strafe –y 1 × step  (right→centre); then FINAL_ALIGN
-          RETURN_LEFT   strafe –y 2 × steps (right→centre→left); then FINAL_ALIGN
-          RETURN_RIGHT  already at right; transition directly to FINAL_ALIGN
-          FINAL_ALIGN   rotate until centred; then → DONE
+          LEFT           strafe -y for 1 × CRAB_STEP_DURATION
+          LEFT_ALIGN     rotate until aligned; record left_size
+          RIGHT          strafe +y for 2 × CRAB_STEP_DURATION
+          RIGHT_ALIGN    rotate until aligned; record right_size
+          DECIDE         compare; pick winner:
+                           centre → RETURN_CENTER → FINAL_ALIGN → DONE
+                           left   → RETURN_LEFT   → RECENTER_ALIGN → restart
+                           right  → RECENTER_ALIGN (already here) → restart
+          RETURN_CENTER  strafe -y 1 × step (right → centre)
+          RETURN_LEFT    strafe -y 2 × steps (right → centre → left)
+          RECENTER_ALIGN rotate until aligned; record fresh best_size; go to LEFT
+          FINAL_ALIGN    rotate until aligned; → DONE
         """
         elapsed = time.time() - self.explore_start
 
-        def _set_explore(sub: str, log: str = "") -> None:
-            """Transition the EXPLORE sub-state and log the change."""
-            suffix = f"  – {log}" if log else ""
-            self.get_logger().info(f"EXPLORE  {self.explore_mode}  →  {sub}{suffix}")
-            self.explore_mode = sub
-            self.explore_start = time.time()
-
-        # ── LEFT: strafe one step to the left ────────────────────────────────
+        # ── LEFT ─────────────────────────────────────────────────────────────
         if self.explore_mode == "LEFT":
             cmd.linear.y = -CRAB_SPEED
-
             if elapsed >= CRAB_STEP_DURATION:
-                _set_explore("LEFT_ALIGN", "left step done")
+                self._set_explore("LEFT_ALIGN", "left step done")
 
-        # ── LEFT_ALIGN: hold position; rotate until centred ──────────────────
+        # ── LEFT_ALIGN ───────────────────────────────────────────────────────
         elif self.explore_mode == "LEFT_ALIGN":
             if abs(angle_error) < ALIGN_TOLERANCE:
                 self.left_size = self.target_size
-                _set_explore("RIGHT", f"left_size = {self.left_size:.3f}")
+                self._set_explore("RIGHT", f"left_size = {self.left_size:.3f}")
             else:
                 cmd.angular.z = _clamp(ANGLE_KP * angle_error, MAX_ANGULAR * 0.5)
 
-        # ── RIGHT: strafe two steps to the right (left → centre → right) ─────
+        # ── RIGHT ────────────────────────────────────────────────────────────
         elif self.explore_mode == "RIGHT":
             cmd.linear.y = CRAB_SPEED
-
             if elapsed >= 2 * CRAB_STEP_DURATION:
-                _set_explore("RIGHT_ALIGN", "right step done")
+                self._set_explore("RIGHT_ALIGN", "right step done")
 
-        # ── RIGHT_ALIGN: hold position; rotate until centred ─────────────────
+        # ── RIGHT_ALIGN ──────────────────────────────────────────────────────
         elif self.explore_mode == "RIGHT_ALIGN":
             if abs(angle_error) < ALIGN_TOLERANCE:
                 self.right_size = self.target_size
-                _set_explore("DECIDE", f"right_size = {self.right_size:.3f}")
+                self._set_explore("DECIDE", f"right_size = {self.right_size:.3f}")
             else:
                 cmd.angular.z = _clamp(ANGLE_KP * angle_error, MAX_ANGULAR * 0.5)
 
-        # ── DECIDE: compare the three measurements ────────────────────────────
+        # ── DECIDE ───────────────────────────────────────────────────────────
         elif self.explore_mode == "DECIDE":
             self.get_logger().info(
-                f"EXPLORE DECIDE:  centre={self.best_size:.3f}  "
-                f"left={self.left_size:.3f}  right={self.right_size:.3f}"
+                f"EXPLORE [{self._explore_iteration}] DECIDE:  "
+                f"centre={self.best_size:.3f}  "
+                f"left={self.left_size:.3f}  "
+                f"right={self.right_size:.3f}"
             )
-            if self.best_size >= self.left_size and self.best_size >= self.right_size:
-                _set_explore("RETURN_CENTER", "centre is best")
-            elif self.left_size >= self.right_size:
-                _set_explore("RETURN_LEFT", "left is best")
-            else:
-                _set_explore("FINAL_ALIGN", "right is best – already here")
 
-        # ── RETURN_CENTER: strafe left one step (right → centre) ─────────────
+            # Centre is the best viewpoint – head back and finish
+            if self.best_size >= self.left_size and self.best_size >= self.right_size:
+                self._set_explore("RETURN_CENTER", "centre is best → finishing")
+
+            # Left is better – move there and restart the sweep from that new centre
+            elif self.left_size >= self.right_size:
+                self._set_explore("RETURN_LEFT", "left is best → recentring there")
+
+            # Right is better – already here; realign and restart from this new centre
+            else:
+                self._set_explore("RECENTER_ALIGN", "right is best → recentring here")
+
+        # ── RETURN_CENTER ────────────────────────────────────────────────────
+        # Currently at the right position; strafe one step left to reach centre.
         elif self.explore_mode == "RETURN_CENTER":
             cmd.linear.y = -CRAB_SPEED
-
             if elapsed >= CRAB_STEP_DURATION:
-                _set_explore("FINAL_ALIGN", "at centre")
+                self._set_explore("FINAL_ALIGN", "at centre")
 
-        # ── RETURN_LEFT: strafe left two steps (right → centre → left) ───────
+        # ── RETURN_LEFT ──────────────────────────────────────────────────────
+        # Currently at the right position; strafe two steps left to reach left.
         elif self.explore_mode == "RETURN_LEFT":
             cmd.linear.y = -CRAB_SPEED
-
             if elapsed >= 2 * CRAB_STEP_DURATION:
-                _set_explore("FINAL_ALIGN", "at left")
+                self._set_explore("RECENTER_ALIGN", "at left position")
 
-        # ── FINAL_ALIGN: re-centre camera, then signal task complete ──────────
+        # ── RECENTER_ALIGN ───────────────────────────────────────────────────
+        # Arrived at the new centre position (either left or right won).
+        # Re-align the camera, record a fresh best_size, then restart the sweep.
+        elif self.explore_mode == "RECENTER_ALIGN":
+            if abs(angle_error) < ALIGN_TOLERANCE:
+                # Record current position as the new centre baseline
+                self.best_size = self.target_size
+                self.left_size = 0.0
+                self.right_size = 0.0
+                self._explore_iteration += 1
+                self.get_logger().info(
+                    f"EXPLORE: new centre baseline = {self.best_size:.3f}  "
+                    f"(iteration {self._explore_iteration})"
+                )
+                # Restart the sweep from this new centre
+                self._set_explore("LEFT", "restarting sweep")
+            else:
+                cmd.angular.z = _clamp(ANGLE_KP * angle_error, MAX_ANGULAR * 0.5)
+
+        # ── FINAL_ALIGN ──────────────────────────────────────────────────────
+        # Centre won; re-align one last time then declare the task complete.
         elif self.explore_mode == "FINAL_ALIGN":
             if abs(angle_error) < ALIGN_TOLERANCE:
                 self._set_mode("DONE", "EXPLORE complete")
