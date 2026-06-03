@@ -73,13 +73,13 @@ LIDAR_MIN_RANGE: float = 0.1
 ANGLE_KP: float = 0.4
 
 # Hard cap on commanded angular velocity (rad/s)
-MAX_ANGULAR: float = 0.2
+MAX_ANGULAR: float = 0.5
 
 # Forward cruise speed while tracking (m/s)
-TRACK_LINEAR: float = 0.4
+TRACK_LINEAR: float = 0.2
 
 # Lateral (y) speed during EXPLORE crab-walk steps (m/s)
-CRAB_SPEED: float = 0.05
+CRAB_SPEED: float = 0.2
 
 # Duration of a single EXPLORE lateral step (s); two steps = full sweep
 CRAB_STEP_DURATION: float = 2.0
@@ -116,7 +116,7 @@ class VisionController(Node):
         # ── Publishers ───────────────────────────────────────────────────────
         self.cmd_pub = self.create_publisher(
             Twist,
-            "/mirte_base_controller/cmd_vel_unstamped",
+            "/mirte_base_controller/cmd_vel",
             10,
         )
 
@@ -157,7 +157,7 @@ class VisionController(Node):
 
         # ── Tunable parameters ───────────────────────────────────────────────
         # Distance at which the robot considers the target "reached" (m)
-        self.stop_distance: float = 1.5
+        self.stop_distance: float = 0.15
 
         # Angle error below which the robot drives forward instead of rotating
         self.angle_threshold: float = math.radians(5)
@@ -166,12 +166,12 @@ class VisionController(Node):
         self.target_timeout: float = 5.0
 
         # SEARCHING: constant forward speed (m/s)
-        self.search_linear: float = 0.1
+        self.search_linear: float = 0.05
 
         # SEARCHING: angular speed starts high and decays (spiral outward)
-        self.search_angular_start: float = 0.5  # initial  (rad/s)
-        self.search_angular_min: float = 0.1    # floor    (rad/s)
-        self.search_expand_rate: float = 0.05   # decay    (rad/s per second)
+        self.search_angular_start: float = 0.2  # initial  (rad/s)
+        self.search_angular_min: float = 0.1  # floor    (rad/s)
+        self.search_expand_rate: float = 0.05  # decay    (rad/s per second)
 
         # ── Finite-state machine ─────────────────────────────────────────────
         self.mode: str = "INIT_SCAN"
@@ -321,7 +321,7 @@ class VisionController(Node):
             else:
                 self.search_start = time.time()
                 self._set_mode("SEARCHING", "recovery timed out")
-
+            time.sleep(1)
             self.cmd_pub.publish(cmd)
             return
 

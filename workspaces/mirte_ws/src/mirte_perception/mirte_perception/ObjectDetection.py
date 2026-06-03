@@ -111,7 +111,7 @@ class DetectorGoalNode(Node):
         # ── Subscribers ──────────────────────────────────────────────────────
         self.create_subscription(
             Image,
-            "/camera/image_raw",
+            "camera/color/image_raw",
             self._image_callback,
             10,
         )

@@ -12,7 +12,7 @@ class CrabWalk(Node):
 
         self.publisher_ = self.create_publisher(
             Twist,
-            '/mirte_base_controller/cmd_vel_unstamped',
+            '/mirte_base_controller/cmd_vel',
             10
         )
 

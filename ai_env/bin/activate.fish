@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/wout/spatial_ai/ai_env
+set -gx VIRTUAL_ENV /home/mirte/Spatial-AI-group-1/ai_env
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH
