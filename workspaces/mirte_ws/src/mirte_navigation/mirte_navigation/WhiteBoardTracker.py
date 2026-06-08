@@ -11,7 +11,7 @@ from std_msgs.msg import String
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 
 
-FRONT_CONE_HALF_ANGLE: float = 0.3
+FRONT_CONE_HALF_ANGLE: float = 0.15
 LIDAR_MIN_RANGE:       float = 0.1
 
 
@@ -21,14 +21,14 @@ class WhiteBoardTracker(Node):
         super().__init__("vision_orientation_controller")
 
         # ── Tuning: searching ────────────────────────────────────────────────
-        self.stop_distance:      float = 2.5
+        self.stop_distance:      float = 1.2
         self.target_timeout:     float = 5.0
         self.search_nudge_angle: float = 0.3
         self.search_nudge_speed: float = 0.3
 
         # ── Tuning: orientation correction ───────────────────────────────────
-        self.angle_accuracy: float = 0.1
-        self.base_kp:        float = 5.0
+        self.angle_accuracy: float = 0.15
+        self.base_kp:        float = 6.0
         self.base_max_vel:   float = 0.8
         self.track_linear:   float = 0.5
 
@@ -91,7 +91,7 @@ class WhiteBoardTracker(Node):
             return
 
         # ── TRACKING → DONE when close enough ────────────────────────────────
-        if self.front_distance < self.stop_distance:
+        if self.front_distance < self.stop_distance and self.last_angle < self.angle_accuracy:
             self._set_mode("DONE", f"distance {self.front_distance:.2f} m < {self.stop_distance} m")
             self.cmd_pub.publish(Twist())
             done_msg = String()
