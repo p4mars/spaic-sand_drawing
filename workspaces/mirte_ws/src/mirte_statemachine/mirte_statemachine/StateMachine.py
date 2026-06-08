@@ -138,7 +138,7 @@ class StateManager(Node):
         point.positions = [
             0.0,    # shoulder_pan  – centred
             0.0,    # shoulder_lift – down
-            -1.56,  # elbow         – folded back (~90 °) to clear LiDAR
+            -1.57,  # elbow         – folded back (~90 °) to clear LiDAR
             0.0,    # wrist         – neutral
         ]
         point.time_from_start.sec = ARM_RAISE_DURATION

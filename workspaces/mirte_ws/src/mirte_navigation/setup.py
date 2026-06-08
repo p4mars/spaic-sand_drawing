@@ -32,6 +32,8 @@ setup(
             'CrabWalk = mirte_navigation.crabwalk:main',
             'VisionDrive = mirte_navigation.vision_goal_controller:main',
             'VisionController = mirte_navigation.VisionController:main',
+            'OrientationController = mirte_navigation.OrientationController:main',
+            'Controller = mirte_navigation.Controller:main',
 
         ],
     },

@@ -51,7 +51,7 @@ POLL_INTERVAL: float = 0.1
 
 # Roboflow workspace / workflow identifiers
 WORKSPACE_NAME: str = "spatial-ai-kdgzb"
-WORKFLOW_ID: str = "general-segmentation-api-3"
+WORKFLOW_ID: str = "general-segmentation-api-7"
 
 
 # ---------------------------------------------------------------------------

@@ -83,6 +83,7 @@ FOV_RAD: float = math.radians(FOV_DEG)
 
 # Expected image width in pixels (used for angle computation)
 IMAGE_WIDTH: int = 640
+IMAGE_HEIGHT: int = 480  
 
 # Directory where camera frames are staged for the detector subprocess
 FRAME_DIR: str = "images"
@@ -111,7 +112,7 @@ class DetectorGoalNode(Node):
         # ── Subscribers ──────────────────────────────────────────────────────
         self.create_subscription(
             Image,
-            "camera/color/image_raw",
+            "/camera/color/image_raw",
             self._image_callback,
             10,
         )
@@ -276,18 +277,21 @@ class DetectorGoalNode(Node):
             return  # ignore other detected classes
 
         cx: float = detection["center_x"]
+        cy: float = detection["center_y"]
         bbox_area: float = detection["width"] * detection["height"]  # pixels²
 
         # Pixel error (positive = target is left of centre)
         error_px: float = -(cx - IMAGE_WIDTH / 2)
-        angle: float = (error_px / IMAGE_WIDTH) * FOV_RAD
+        angle_x: float = (error_px / IMAGE_WIDTH) * FOV_RAD
+        error_px: float = -(cy - IMAGE_HEIGHT / 2)
+        angle_y: float = (error_px / IMAGE_HEIGHT) * FOV_RAD
 
         msg = String()
-        msg.data = json.dumps({"angle": angle, "bbox_area": bbox_area})
+        msg.data = json.dumps({"angle_x": angle_x, "angle_y": angle_y, "bbox_area": bbox_area})
         self.target_pub.publish(msg)
 
         self.get_logger().debug(
-            f"Whiteboard detected – angle {math.degrees(angle):+.2f}°  "
+            f"Whiteboard detected – angle {math.degrees(angle_x):+.2f}°  "
             f"bbox_area {bbox_area:.0f} px²"
         )
 
