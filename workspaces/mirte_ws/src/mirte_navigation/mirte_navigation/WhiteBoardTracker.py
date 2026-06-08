@@ -15,7 +15,7 @@ FRONT_CONE_HALF_ANGLE: float = 0.3
 LIDAR_MIN_RANGE:       float = 0.1
 
 
-class VisionOrientationController(Node):
+class WhiteBoardTracker(Node):
 
     def __init__(self) -> None:
         super().__init__("vision_orientation_controller")
@@ -206,7 +206,7 @@ class VisionOrientationController(Node):
 
 def main(args=None) -> None:
     rclpy.init(args=args)
-    node = VisionOrientationController()
+    node = WhiteBoardTracker()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:

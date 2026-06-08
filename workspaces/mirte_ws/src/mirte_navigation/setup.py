@@ -28,12 +28,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'GoToGoal = mirte_navigation.go_to_relative_goal:main',
             'CrabWalk = mirte_navigation.crabwalk:main',
-            'VisionDrive = mirte_navigation.vision_goal_controller:main',
-            'VisionController = mirte_navigation.VisionController:main',
             'OrientationController = mirte_navigation.OrientationController:main',
-            'Controller = mirte_navigation.Controller:main',
+            'WhiteBoardTracker = mirte_navigation.WhiteBoardTracker:main',
 
         ],
     },

@@ -18,15 +18,15 @@ def generate_launch_description():
         output='screen'
     )
 
-    vision_controller = Node(
+    white_board_tracker = Node(
         package='mirte_navigation',
-        executable='VisionController',
-        name='VisionController',
+        executable='WhiteBoardTracker',
+        name='WhiteBoardTracker',
         output='screen'
     )
 
     return LaunchDescription([
         state_manager,
         detector,
-        vision_controller
+        white_board_tracker
     ])
