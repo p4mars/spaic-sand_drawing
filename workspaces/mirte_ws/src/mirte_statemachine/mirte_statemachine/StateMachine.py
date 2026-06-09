@@ -23,7 +23,9 @@ Topics
 
 State sequence
 ──────────────
-  RAISE_ARM  →  (arm reaches position)  →  TRACK_WHITEBOARD  →  DONE
+  RAISE_ARM  →  (arm reaches position)  →  TRACK_WHITEBOARD
+            →  (whiteboard reached)      →  READ_WHITEBOARD
+            →  (reading complete)        →  DONE
 """
 
 import rclpy
@@ -45,6 +47,19 @@ ARM_RAISE_DURATION: int = 7
 # Delay (s) after node startup before the arm-raise sequence begins, giving
 # the arm controller time to come online.
 STARTUP_DELAY: float = 7.0
+
+# Valid state transitions: maps each state to the state a DONE signal advances
+# it to, or None if DONE means shut down.
+# _NEXT_STATE: dict[str, str | None] = {
+#     "RAISE_ARM":        "TRACK_WHITEBOARD",
+#     "TRACK_WHITEBOARD": "READ_WHITEBOARD",
+#     "READ_WHITEBOARD":  None,   # DONE here → shutdown
+# }
+_NEXT_STATE: dict[str, str | None] = {
+    "RAISE_ARM":        "TRACK_WHITEBOARD",
+    "TRACK_WHITEBOARD": "TRACK_SANDPIT",
+    "TRACK_SANDPIT":  'DONE',   # DONE here → shutdown
+}
 
 
 # ---------------------------------------------------------------------------
@@ -161,8 +176,10 @@ class StateManager(Node):
         """
         self._arm_done_timer.cancel()
         self.current_state = "TRACK_WHITEBOARD"
-        self._publish_state_change(self.current_state)
-        self.get_logger().info("Arm raised – transitioning to TRACK_WHITEBOARD")
+        msg = String()
+        msg.data = self.current_state
+        self.state_change_pub.publish(msg)
+        self.get_logger().info(f"State -> {self.current_state}")
 
     # -- Callbacks ------------------------------------------------------------
 
@@ -170,25 +187,31 @@ class StateManager(Node):
         """
         Handle an incoming state-transition request.
 
-        Updates ``current_state`` and broadcasts it on /robot_state.
-        On DONE the node logs completion; actual shutdown is handled by the
-        ``main()`` entry point (calling ``rclpy.shutdown()`` inside a
-        spinning callback is not safe).
+        Plain state names (e.g. "TRACK_WHITEBOARD") set the state directly.
+        The special token "DONE" advances the current state using the
+        ``_NEXT_STATE`` table; if the table maps to None the task is complete
+        and the node exits cleanly.
         """
         new_state = msg.data
-        self.current_state = new_state
-        self.get_logger().info(f"State → {self.current_state}")
-
-        if new_state == "TRACK_WHITEBOARD":
-            self.get_logger().info("Tracking whiteboard")
-
-        # Broadcast the new state to all subscribers
-        self._publish_current_state()
 
         if new_state == "DONE":
-            self.get_logger().info("Task complete – node will shut down")
-            # Signal main() to exit the spin loop cleanly
-            raise SystemExit
+            next_state = _NEXT_STATE.get(self.current_state)
+            if next_state is None:
+                # Final DONE – task complete
+                self.get_logger().info(
+                    f"DONE received in {self.current_state} – task complete, shutting down"
+                )
+                self._publish_current_state()
+                raise SystemExit
+            else:
+                self.current_state = next_state
+                self.get_logger().info(f"DONE received – State → {self.current_state}")
+        else:
+            self.current_state = new_state
+            self.get_logger().info(f"State → {self.current_state}")
+
+        # Broadcast updated state to all subscribers
+        self._publish_current_state()
 
     def _state_heartbeat_callback(self) -> None:
         """Re-broadcast the current state at 2 Hz so late-joining nodes can catch it."""
@@ -219,7 +242,7 @@ def main(args=None) -> None:
     try:
         rclpy.spin(node)
     except (KeyboardInterrupt, SystemExit):
-        # SystemExit is raised by _state_change_callback on DONE
+        # SystemExit is raised by _state_change_callback on final DONE
         pass
     finally:
         node.destroy_node()

@@ -25,8 +25,16 @@ def generate_launch_description():
         output='screen'
     )
 
+    sandpit_tracker = Node(
+        package='mirte_perception',
+        executable='ArucoDetector',
+        name='ArucoDetector',
+        output='screen'
+    )
+
     return LaunchDescription([
         state_manager,
         detector,
+        sandpit_tracker,
         white_board_tracker
     ])
