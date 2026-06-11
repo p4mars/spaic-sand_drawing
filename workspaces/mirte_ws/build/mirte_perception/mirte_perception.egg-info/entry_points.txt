@@ -1,0 +1,6 @@
+[console_scripts]
+ArucoDetectionSand = mirte_perception.ArucoDetectionSand:main
+ArucoDetector = mirte_perception.ArucoDetection:main
+GoalGenerator = mirte_perception.ObjectDetection:main
+TextDetector = mirte_perception.TextDetection:main
+

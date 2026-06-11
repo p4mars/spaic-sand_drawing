@@ -1,0 +1,6 @@
+source;share/mirte_drawing/hook/pythonpath.ps1
+source;share/mirte_drawing/hook/pythonpath.dsv
+source;share/mirte_drawing/hook/pythonpath.sh
+source;share/mirte_drawing/hook/ament_prefix_path.ps1
+source;share/mirte_drawing/hook/ament_prefix_path.dsv
+source;share/mirte_drawing/hook/ament_prefix_path.sh

@@ -1,0 +1,47 @@
+[24.356s] Invoking command in '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/src/mirte_navigation': PYTHONPATH=/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mirte_navigation build --build-base /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build install --record /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/install.log --single-version-externally-managed install_data
+[33.205s] running egg_info
+[33.212s] creating ../../build/mirte_navigation/mirte_navigation.egg-info
+[33.229s] writing ../../build/mirte_navigation/mirte_navigation.egg-info/PKG-INFO
+[33.234s] writing dependency_links to ../../build/mirte_navigation/mirte_navigation.egg-info/dependency_links.txt
+[33.236s] writing entry points to ../../build/mirte_navigation/mirte_navigation.egg-info/entry_points.txt
+[33.238s] writing requirements to ../../build/mirte_navigation/mirte_navigation.egg-info/requires.txt
+[33.240s] writing top-level names to ../../build/mirte_navigation/mirte_navigation.egg-info/top_level.txt
+[33.244s] writing manifest file '../../build/mirte_navigation/mirte_navigation.egg-info/SOURCES.txt'
+[33.262s] reading manifest file '../../build/mirte_navigation/mirte_navigation.egg-info/SOURCES.txt'
+[33.282s] writing manifest file '../../build/mirte_navigation/mirte_navigation.egg-info/SOURCES.txt'
+[33.287s] running build
+[33.289s] running build_py
+[33.292s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build
+[33.293s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib
+[33.295s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation
+[33.297s] copying mirte_navigation/OrientationController.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation
+[33.298s] copying mirte_navigation/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation
+[33.302s] copying mirte_navigation/CrabWalk.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation
+[33.316s] copying mirte_navigation/WhiteBoardTracker.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation
+[33.319s] running install
+[33.321s] running install_lib
+[33.322s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation
+[33.323s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation/OrientationController.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation
+[33.326s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation
+[33.328s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation/CrabWalk.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation
+[33.330s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation/WhiteBoardTracker.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation
+[33.337s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation/OrientationController.py to OrientationController.cpython-310.pyc
+[33.370s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation/__init__.py to __init__.cpython-310.pyc
+[33.372s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation/CrabWalk.py to CrabWalk.cpython-310.pyc
+[33.373s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation/WhiteBoardTracker.py to WhiteBoardTracker.cpython-310.pyc
+[33.386s] running install_data
+[33.420s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/ament_index
+[33.424s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/ament_index/resource_index
+[33.426s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/ament_index/resource_index/packages
+[33.431s] copying resource/mirte_navigation -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/ament_index/resource_index/packages
+[33.441s] copying package.xml -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/mirte_navigation
+[33.473s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/mirte_navigation/launch
+[33.477s] copying launch/startup.launch.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/mirte_navigation/launch
+[33.480s] running install_egg_info
+[33.534s] Copying ../../build/mirte_navigation/mirte_navigation.egg-info to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation-0.0.0-py3.10.egg-info
+[33.541s] running install_scripts
+[33.773s] Installing CrabWalk script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/mirte_navigation
+[33.775s] Installing OrientationController script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/mirte_navigation
+[33.780s] Installing WhiteBoardTracker script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/mirte_navigation
+[33.782s] writing list of installed files to '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/install.log'
+[34.192s] Invoked command in '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/src/mirte_navigation' returned '0': PYTHONPATH=/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mirte_navigation build --build-base /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build install --record /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/install.log --single-version-externally-managed install_data

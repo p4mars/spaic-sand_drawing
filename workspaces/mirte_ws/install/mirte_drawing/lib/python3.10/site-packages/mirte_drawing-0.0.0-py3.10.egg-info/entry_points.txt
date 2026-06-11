@@ -1,0 +1,3 @@
+[console_scripts]
+SandDrawer = mirte_drawing.SandDrawer:main
+

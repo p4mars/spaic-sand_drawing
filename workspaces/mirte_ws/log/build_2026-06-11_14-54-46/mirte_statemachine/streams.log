@@ -1,0 +1,37 @@
+[24.414s] Invoking command in '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/src/mirte_statemachine': PYTHONPATH=/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mirte_statemachine build --build-base /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build install --record /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/install.log --single-version-externally-managed install_data
+[33.183s] running egg_info
+[33.187s] creating ../../build/mirte_statemachine/mirte_statemachine.egg-info
+[33.203s] writing ../../build/mirte_statemachine/mirte_statemachine.egg-info/PKG-INFO
+[33.206s] writing dependency_links to ../../build/mirte_statemachine/mirte_statemachine.egg-info/dependency_links.txt
+[33.212s] writing entry points to ../../build/mirte_statemachine/mirte_statemachine.egg-info/entry_points.txt
+[33.214s] writing requirements to ../../build/mirte_statemachine/mirte_statemachine.egg-info/requires.txt
+[33.215s] writing top-level names to ../../build/mirte_statemachine/mirte_statemachine.egg-info/top_level.txt
+[33.222s] writing manifest file '../../build/mirte_statemachine/mirte_statemachine.egg-info/SOURCES.txt'
+[33.229s] reading manifest file '../../build/mirte_statemachine/mirte_statemachine.egg-info/SOURCES.txt'
+[33.237s] writing manifest file '../../build/mirte_statemachine/mirte_statemachine.egg-info/SOURCES.txt'
+[33.254s] running build
+[33.257s] running build_py
+[33.266s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build
+[33.271s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build/lib
+[33.297s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build/lib/mirte_statemachine
+[33.299s] copying mirte_statemachine/StateMachine.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build/lib/mirte_statemachine
+[33.313s] copying mirte_statemachine/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build/lib/mirte_statemachine
+[33.315s] running install
+[33.341s] running install_lib
+[33.350s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages/mirte_statemachine
+[33.352s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build/lib/mirte_statemachine/StateMachine.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages/mirte_statemachine
+[33.353s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build/lib/mirte_statemachine/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages/mirte_statemachine
+[33.355s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages/mirte_statemachine/StateMachine.py to StateMachine.cpython-310.pyc
+[33.358s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages/mirte_statemachine/__init__.py to __init__.cpython-310.pyc
+[33.365s] running install_data
+[33.367s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/share/ament_index
+[33.369s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/share/ament_index/resource_index
+[33.370s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/share/ament_index/resource_index/packages
+[33.376s] copying resource/mirte_statemachine -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/share/ament_index/resource_index/packages
+[33.382s] copying package.xml -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/share/mirte_statemachine
+[33.386s] running install_egg_info
+[33.398s] Copying ../../build/mirte_statemachine/mirte_statemachine.egg-info to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages/mirte_statemachine-0.0.0-py3.10.egg-info
+[33.401s] running install_scripts
+[33.662s] Installing StateManager script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/mirte_statemachine
+[33.679s] writing list of installed files to '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/install.log'
+[34.138s] Invoked command in '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/src/mirte_statemachine' returned '0': PYTHONPATH=/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mirte_statemachine build --build-base /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build install --record /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/install.log --single-version-externally-managed install_data

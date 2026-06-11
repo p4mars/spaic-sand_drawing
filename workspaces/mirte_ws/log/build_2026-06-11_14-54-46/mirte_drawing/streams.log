@@ -1,0 +1,37 @@
+[24.739s] Invoking command in '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/src/mirte_drawing': PYTHONPATH=/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mirte_drawing build --build-base /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build install --record /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/install.log --single-version-externally-managed install_data
+[31.080s] running egg_info
+[31.105s] creating ../../build/mirte_drawing/mirte_drawing.egg-info
+[31.107s] writing ../../build/mirte_drawing/mirte_drawing.egg-info/PKG-INFO
+[31.108s] writing dependency_links to ../../build/mirte_drawing/mirte_drawing.egg-info/dependency_links.txt
+[31.123s] writing entry points to ../../build/mirte_drawing/mirte_drawing.egg-info/entry_points.txt
+[31.126s] writing requirements to ../../build/mirte_drawing/mirte_drawing.egg-info/requires.txt
+[31.136s] writing top-level names to ../../build/mirte_drawing/mirte_drawing.egg-info/top_level.txt
+[31.144s] writing manifest file '../../build/mirte_drawing/mirte_drawing.egg-info/SOURCES.txt'
+[31.152s] reading manifest file '../../build/mirte_drawing/mirte_drawing.egg-info/SOURCES.txt'
+[31.185s] writing manifest file '../../build/mirte_drawing/mirte_drawing.egg-info/SOURCES.txt'
+[31.216s] running build
+[31.239s] running build_py
+[31.244s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build
+[31.252s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib
+[31.259s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing
+[31.265s] copying mirte_drawing/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing
+[31.267s] copying mirte_drawing/SandDrawer.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing
+[31.269s] running install
+[31.274s] running install_lib
+[31.276s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing
+[31.277s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing
+[31.279s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing/SandDrawer.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing
+[31.281s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing/__init__.py to __init__.cpython-310.pyc
+[31.283s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing/SandDrawer.py to SandDrawer.cpython-310.pyc
+[31.305s] running install_data
+[31.313s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/ament_index
+[31.316s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/ament_index/resource_index
+[31.321s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/ament_index/resource_index/packages
+[31.335s] copying resource/mirte_drawing -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/ament_index/resource_index/packages
+[31.344s] copying package.xml -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/mirte_drawing
+[31.348s] running install_egg_info
+[31.356s] Copying ../../build/mirte_drawing/mirte_drawing.egg-info to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing-0.0.0-py3.10.egg-info
+[31.366s] running install_scripts
+[31.686s] Installing SandDrawer script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/mirte_drawing
+[31.693s] writing list of installed files to '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/install.log'
+[32.170s] Invoked command in '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/src/mirte_drawing' returned '0': PYTHONPATH=/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mirte_drawing build --build-base /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build install --record /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/install.log --single-version-externally-managed install_data

@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/mirte_drawing/mirte_drawing.egg-info
+writing ../../build/mirte_drawing/mirte_drawing.egg-info/PKG-INFO
+writing dependency_links to ../../build/mirte_drawing/mirte_drawing.egg-info/dependency_links.txt
+writing entry points to ../../build/mirte_drawing/mirte_drawing.egg-info/entry_points.txt
+writing requirements to ../../build/mirte_drawing/mirte_drawing.egg-info/requires.txt
+writing top-level names to ../../build/mirte_drawing/mirte_drawing.egg-info/top_level.txt
+writing manifest file '../../build/mirte_drawing/mirte_drawing.egg-info/SOURCES.txt'
+reading manifest file '../../build/mirte_drawing/mirte_drawing.egg-info/SOURCES.txt'
+writing manifest file '../../build/mirte_drawing/mirte_drawing.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build
+creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib
+creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing
+copying mirte_drawing/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing
+copying mirte_drawing/SandDrawer.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing
+running install
+running install_lib
+creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing
+copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing
+copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing/SandDrawer.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing
+byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing/SandDrawer.py to SandDrawer.cpython-310.pyc
+running install_data
+creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/ament_index
+creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/ament_index/resource_index
+creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/ament_index/resource_index/packages
+copying resource/mirte_drawing -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/ament_index/resource_index/packages
+copying package.xml -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/mirte_drawing
+running install_egg_info
+Copying ../../build/mirte_drawing/mirte_drawing.egg-info to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing-0.0.0-py3.10.egg-info
+running install_scripts
+Installing SandDrawer script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/mirte_drawing
+writing list of installed files to '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/install.log'

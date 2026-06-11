@@ -1,0 +1,5 @@
+[console_scripts]
+CrabWalk = mirte_navigation.crabwalk:main
+OrientationController = mirte_navigation.OrientationController:main
+WhiteBoardTracker = mirte_navigation.WhiteBoardTracker:main
+

@@ -1,0 +1,508 @@
+[0.000000] (-) TimerEvent: {}
+[0.006243] (mirte_drawing) JobQueued: {'identifier': 'mirte_drawing', 'dependencies': OrderedDict()}
+[0.008053] (mirte_navigation) JobQueued: {'identifier': 'mirte_navigation', 'dependencies': OrderedDict()}
+[0.008513] (mirte_perception) JobQueued: {'identifier': 'mirte_perception', 'dependencies': OrderedDict()}
+[0.009421] (mirte_statemachine) JobQueued: {'identifier': 'mirte_statemachine', 'dependencies': OrderedDict()}
+[0.010655] (mirte_drawing) JobStarted: {'identifier': 'mirte_drawing'}
+[0.097770] (-) TimerEvent: {}
+[0.138723] (mirte_navigation) JobStarted: {'identifier': 'mirte_navigation'}
+[0.198055] (-) TimerEvent: {}
+[0.210560] (mirte_perception) JobStarted: {'identifier': 'mirte_perception'}
+[0.283667] (mirte_statemachine) JobStarted: {'identifier': 'mirte_statemachine'}
+[0.298618] (-) TimerEvent: {}
+[0.404222] (-) TimerEvent: {}
+[0.511119] (-) TimerEvent: {}
+[0.612668] (-) TimerEvent: {}
+[0.714802] (-) TimerEvent: {}
+[0.817867] (-) TimerEvent: {}
+[0.919456] (-) TimerEvent: {}
+[1.021289] (-) TimerEvent: {}
+[1.122821] (-) TimerEvent: {}
+[1.224299] (-) TimerEvent: {}
+[1.325871] (-) TimerEvent: {}
+[1.427386] (-) TimerEvent: {}
+[1.528653] (-) TimerEvent: {}
+[1.631821] (-) TimerEvent: {}
+[1.733819] (-) TimerEvent: {}
+[1.835332] (-) TimerEvent: {}
+[1.936727] (-) TimerEvent: {}
+[2.038441] (-) TimerEvent: {}
+[2.139778] (-) TimerEvent: {}
+[2.241385] (-) TimerEvent: {}
+[2.342687] (-) TimerEvent: {}
+[2.444236] (-) TimerEvent: {}
+[2.545680] (-) TimerEvent: {}
+[2.647070] (-) TimerEvent: {}
+[2.748547] (-) TimerEvent: {}
+[2.850146] (-) TimerEvent: {}
+[2.951436] (-) TimerEvent: {}
+[3.052737] (-) TimerEvent: {}
+[3.154237] (-) TimerEvent: {}
+[3.256417] (-) TimerEvent: {}
+[3.358081] (-) TimerEvent: {}
+[3.459527] (-) TimerEvent: {}
+[3.561695] (-) TimerEvent: {}
+[3.663148] (-) TimerEvent: {}
+[3.764441] (-) TimerEvent: {}
+[3.865835] (-) TimerEvent: {}
+[3.967420] (-) TimerEvent: {}
+[4.071691] (-) TimerEvent: {}
+[4.174884] (-) TimerEvent: {}
+[4.276433] (-) TimerEvent: {}
+[4.378147] (-) TimerEvent: {}
+[4.479383] (-) TimerEvent: {}
+[4.581084] (-) TimerEvent: {}
+[4.682843] (-) TimerEvent: {}
+[4.784240] (-) TimerEvent: {}
+[4.885663] (-) TimerEvent: {}
+[4.987189] (-) TimerEvent: {}
+[5.090960] (-) TimerEvent: {}
+[5.192322] (-) TimerEvent: {}
+[5.293673] (-) TimerEvent: {}
+[5.394914] (-) TimerEvent: {}
+[5.496330] (-) TimerEvent: {}
+[5.597824] (-) TimerEvent: {}
+[5.699307] (-) TimerEvent: {}
+[5.802133] (-) TimerEvent: {}
+[5.903472] (-) TimerEvent: {}
+[6.005804] (-) TimerEvent: {}
+[6.107148] (-) TimerEvent: {}
+[6.208508] (-) TimerEvent: {}
+[6.309889] (-) TimerEvent: {}
+[6.411092] (-) TimerEvent: {}
+[6.512426] (-) TimerEvent: {}
+[6.615147] (-) TimerEvent: {}
+[6.716666] (-) TimerEvent: {}
+[6.818395] (-) TimerEvent: {}
+[6.919982] (-) TimerEvent: {}
+[7.021857] (-) TimerEvent: {}
+[7.123321] (-) TimerEvent: {}
+[7.224672] (-) TimerEvent: {}
+[7.326215] (-) TimerEvent: {}
+[7.427768] (-) TimerEvent: {}
+[7.529238] (-) TimerEvent: {}
+[7.630562] (-) TimerEvent: {}
+[7.733042] (-) TimerEvent: {}
+[7.834688] (-) TimerEvent: {}
+[7.936105] (-) TimerEvent: {}
+[8.037675] (-) TimerEvent: {}
+[8.140467] (-) TimerEvent: {}
+[8.242017] (-) TimerEvent: {}
+[8.343273] (-) TimerEvent: {}
+[8.444572] (-) TimerEvent: {}
+[8.545963] (-) TimerEvent: {}
+[8.647314] (-) TimerEvent: {}
+[8.748544] (-) TimerEvent: {}
+[8.849865] (-) TimerEvent: {}
+[8.951170] (-) TimerEvent: {}
+[9.052413] (-) TimerEvent: {}
+[9.153778] (-) TimerEvent: {}
+[9.255526] (-) TimerEvent: {}
+[9.358908] (-) TimerEvent: {}
+[9.465283] (-) TimerEvent: {}
+[9.567907] (-) TimerEvent: {}
+[9.669632] (-) TimerEvent: {}
+[9.771140] (-) TimerEvent: {}
+[9.872544] (-) TimerEvent: {}
+[9.974222] (-) TimerEvent: {}
+[10.082331] (-) TimerEvent: {}
+[10.187680] (-) TimerEvent: {}
+[10.289509] (-) TimerEvent: {}
+[10.391622] (-) TimerEvent: {}
+[10.493129] (-) TimerEvent: {}
+[10.594568] (-) TimerEvent: {}
+[10.696101] (-) TimerEvent: {}
+[10.797703] (-) TimerEvent: {}
+[10.899457] (-) TimerEvent: {}
+[11.002091] (-) TimerEvent: {}
+[11.103492] (-) TimerEvent: {}
+[11.204844] (-) TimerEvent: {}
+[11.306398] (-) TimerEvent: {}
+[11.407878] (-) TimerEvent: {}
+[11.509215] (-) TimerEvent: {}
+[11.612733] (-) TimerEvent: {}
+[11.714287] (-) TimerEvent: {}
+[11.815877] (-) TimerEvent: {}
+[11.917244] (-) TimerEvent: {}
+[12.018576] (-) TimerEvent: {}
+[12.120197] (-) TimerEvent: {}
+[12.222974] (-) TimerEvent: {}
+[12.324388] (-) TimerEvent: {}
+[12.425846] (-) TimerEvent: {}
+[12.527203] (-) TimerEvent: {}
+[12.628534] (-) TimerEvent: {}
+[12.730125] (-) TimerEvent: {}
+[12.831401] (-) TimerEvent: {}
+[12.932870] (-) TimerEvent: {}
+[13.034339] (-) TimerEvent: {}
+[13.136352] (-) TimerEvent: {}
+[13.237853] (-) TimerEvent: {}
+[13.339407] (-) TimerEvent: {}
+[13.446755] (-) TimerEvent: {}
+[13.549207] (-) TimerEvent: {}
+[13.653306] (-) TimerEvent: {}
+[13.754863] (-) TimerEvent: {}
+[13.861293] (-) TimerEvent: {}
+[13.965427] (-) TimerEvent: {}
+[14.069282] (-) TimerEvent: {}
+[14.170846] (-) TimerEvent: {}
+[14.272534] (-) TimerEvent: {}
+[14.377263] (-) TimerEvent: {}
+[14.478928] (-) TimerEvent: {}
+[14.580790] (-) TimerEvent: {}
+[14.685352] (-) TimerEvent: {}
+[14.787399] (-) TimerEvent: {}
+[14.893296] (-) TimerEvent: {}
+[14.995351] (-) TimerEvent: {}
+[15.097363] (-) TimerEvent: {}
+[15.201380] (-) TimerEvent: {}
+[15.303389] (-) TimerEvent: {}
+[15.409437] (-) TimerEvent: {}
+[15.511355] (-) TimerEvent: {}
+[15.613301] (-) TimerEvent: {}
+[15.721346] (-) TimerEvent: {}
+[15.901389] (-) TimerEvent: {}
+[16.009390] (-) TimerEvent: {}
+[16.124458] (-) TimerEvent: {}
+[16.241835] (-) TimerEvent: {}
+[16.361593] (-) TimerEvent: {}
+[16.467986] (-) TimerEvent: {}
+[16.571231] (-) TimerEvent: {}
+[16.675439] (-) TimerEvent: {}
+[16.784400] (-) TimerEvent: {}
+[16.895616] (-) TimerEvent: {}
+[16.998450] (-) TimerEvent: {}
+[17.136749] (-) TimerEvent: {}
+[17.250536] (-) TimerEvent: {}
+[17.354855] (-) TimerEvent: {}
+[17.461186] (-) TimerEvent: {}
+[17.568463] (-) TimerEvent: {}
+[17.673338] (-) TimerEvent: {}
+[17.778939] (-) TimerEvent: {}
+[17.885838] (-) TimerEvent: {}
+[17.991173] (-) TimerEvent: {}
+[18.098209] (-) TimerEvent: {}
+[18.199906] (-) TimerEvent: {}
+[18.306568] (-) TimerEvent: {}
+[18.409077] (-) TimerEvent: {}
+[18.513983] (-) TimerEvent: {}
+[18.616815] (-) TimerEvent: {}
+[18.721925] (-) TimerEvent: {}
+[18.840589] (-) TimerEvent: {}
+[18.947038] (-) TimerEvent: {}
+[19.058963] (-) TimerEvent: {}
+[19.163273] (-) TimerEvent: {}
+[19.272922] (-) TimerEvent: {}
+[19.377555] (-) TimerEvent: {}
+[19.482754] (-) TimerEvent: {}
+[19.597122] (-) TimerEvent: {}
+[19.700474] (-) TimerEvent: {}
+[19.807599] (-) TimerEvent: {}
+[19.916004] (-) TimerEvent: {}
+[20.025281] (-) TimerEvent: {}
+[20.128879] (-) TimerEvent: {}
+[20.255575] (-) TimerEvent: {}
+[20.359027] (-) TimerEvent: {}
+[20.497851] (-) TimerEvent: {}
+[20.605341] (-) TimerEvent: {}
+[20.716037] (-) TimerEvent: {}
+[20.837365] (-) TimerEvent: {}
+[20.973190] (-) TimerEvent: {}
+[21.075914] (-) TimerEvent: {}
+[21.180556] (-) TimerEvent: {}
+[21.289427] (-) TimerEvent: {}
+[21.401338] (-) TimerEvent: {}
+[21.503262] (-) TimerEvent: {}
+[21.606887] (-) TimerEvent: {}
+[21.712900] (-) TimerEvent: {}
+[21.815797] (-) TimerEvent: {}
+[21.917394] (-) TimerEvent: {}
+[22.022541] (-) TimerEvent: {}
+[22.129645] (-) TimerEvent: {}
+[22.231349] (-) TimerEvent: {}
+[22.333230] (-) TimerEvent: {}
+[22.437356] (-) TimerEvent: {}
+[22.541293] (-) TimerEvent: {}
+[22.647784] (-) TimerEvent: {}
+[22.750565] (-) TimerEvent: {}
+[22.856733] (-) TimerEvent: {}
+[22.963376] (-) TimerEvent: {}
+[23.067002] (-) TimerEvent: {}
+[23.171799] (-) TimerEvent: {}
+[23.278596] (-) TimerEvent: {}
+[23.414218] (-) TimerEvent: {}
+[23.517311] (-) TimerEvent: {}
+[23.630138] (-) TimerEvent: {}
+[23.741547] (-) TimerEvent: {}
+[23.855328] (-) TimerEvent: {}
+[23.980336] (-) TimerEvent: {}
+[24.099948] (-) TimerEvent: {}
+[24.209169] (mirte_perception) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/mirte_perception', 'build', '--build-base', '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build', 'install', '--record', '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/src/mirte_perception', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US.UTF-8', 'USER': 'mirte', 'GIT_ASKPASS': '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mirte/mirte_ws/install/web_video_server/lib:/home/mirte/mirte_ws/install/orbbec_camera/lib:/home/mirte/mirte_ws/install/orbbec_camera_msgs/lib:/home/mirte/mirte_ws/install/mirte_location_markers/lib:/opt/ros/humble/opt/zenoh_cpp_vendor/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/usr/lib/code-server/lib/vscode/bin/helpers/browser.sh', 'HOME': '/home/mirte', 'OLDPWD': '/home/mirte/Spatial-AI-group-1', 'TERM_PROGRAM_VERSION': '1.116.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-227d43d0-5836-4523-a385-5251949b1fd4.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/lib/code-server/lib/node', 'MIRTE_FASTDDS': 'false', 'SYSTEMD_EXEC_PID': '690', 'ROS_LOG_DIR': '/tmp/ros', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'COLCON_LOG_PATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/log', 'COLCON_PREFIX_PATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install:/home/mirte/mirte_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'mirte', 'JOURNAL_STREAM': '9:12621', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/mirte/.local/share/code-server/User/globalStorage/github.copilot-chat/debugCommand:/home/mirte/.local/share/code-server/User/globalStorage/github.copilot-chat/copilotCli:/usr/lib/code-server/lib/vscode/bin/remote-cli:/home/mirte/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/mirte/.local/bin:/home/mirte/.local/bin', 'INVOCATION_ID': '5d0fb65aa7644db4a102903adcad0b11', 'MIRTE_USE_MULTIROBOT': 'false', 'VSCODE_PROXY_URI': 'http://10.194.3.114:8000/proxy/{{port}}/', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-7d486263a6.sock', 'NODE_EXEC_PATH': '/usr/lib/code-server/lib/node', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '7', 'AMENT_PREFIX_PATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing:/home/mirte/mirte_ws/install/mirte_bringup:/home/mirte/mirte_ws/install/web_video_server:/home/mirte/mirte_ws/install/rplidar_ros:/home/mirte/mirte_ws/install/orbbec_description:/home/mirte/mirte_ws/install/orbbec_camera:/home/mirte/mirte_ws/install/orbbec_camera_msgs:/home/mirte/mirte_ws/install/mirte_zenoh_setup:/home/mirte/mirte_ws/install/mirte_workshop:/home/mirte/mirte_ws/install/mirte_test:/home/mirte/mirte_ws/install/mirte_pioneer_description:/home/mirte/mirte_ws/install/mirte_navigation:/home/mirte/mirte_ws/install/mirte_moveit_config:/home/mirte/mirte_ws/install/mirte_master_description:/home/mirte/mirte_ws/install/mirte_location_markers:/home/mirte/mirte_ws/install/mirte_fastdds_discovery_setup:/home/mirte/mirte_ws/install/mirte_drawing:/opt/ros/humble', 'LC_MESSAGES': 'en_US.UTF-8', 'PKG_HOME': '/home/mirte/mirte_ws/install/mirte_zenoh_setup/share/mirte_zenoh_setup', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception', 'MIRTE_ZENOH': 'false', 'LC_ALL': 'en_US.UTF-8', 'PYTHONPATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages:/home/mirte/mirte_ws/install/orbbec_camera_msgs/local/lib/python3.10/dist-packages:/home/mirte/mirte_ws/build/mirte_workshop:/home/mirte/mirte_ws/install/mirte_workshop/lib/python3.10/site-packages:/home/mirte/mirte_ws/build/mirte_test:/home/mirte/mirte_ws/install/mirte_test/lib/python3.10/site-packages:/home/mirte/mirte_ws/build/mirte_navigation:/home/mirte/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages:/home/mirte/mirte_ws/install/mirte_location_markers/local/lib/python3.10/dist-packages:/home/mirte/mirte_ws/build/mirte_drawing:/home/mirte/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/mirte/mirte_ws/install/mirte_bringup:/home/mirte/mirte_ws/install/web_video_server:/home/mirte/mirte_ws/install/rplidar_ros:/home/mirte/mirte_ws/install/orbbec_description:/home/mirte/mirte_ws/install/orbbec_camera:/home/mirte/mirte_ws/install/orbbec_camera_msgs:/home/mirte/mirte_ws/install/mirte_zenoh_setup:/home/mirte/mirte_ws/install/mirte_pioneer_description:/home/mirte/mirte_ws/install/mirte_moveit_config:/home/mirte/mirte_ws/install/mirte_master_description:/home/mirte/mirte_ws/install/mirte_location_markers:/home/mirte/mirte_ws/install/mirte_fastdds_discovery_setup'}, 'shell': False}
+[24.276632] (-) TimerEvent: {}
+[24.393884] (-) TimerEvent: {}
+[24.484706] (mirte_navigation) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/mirte_navigation', 'build', '--build-base', '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build', 'install', '--record', '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/src/mirte_navigation', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US.UTF-8', 'USER': 'mirte', 'GIT_ASKPASS': '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mirte/mirte_ws/install/web_video_server/lib:/home/mirte/mirte_ws/install/orbbec_camera/lib:/home/mirte/mirte_ws/install/orbbec_camera_msgs/lib:/home/mirte/mirte_ws/install/mirte_location_markers/lib:/opt/ros/humble/opt/zenoh_cpp_vendor/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/usr/lib/code-server/lib/vscode/bin/helpers/browser.sh', 'HOME': '/home/mirte', 'OLDPWD': '/home/mirte/Spatial-AI-group-1', 'TERM_PROGRAM_VERSION': '1.116.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-227d43d0-5836-4523-a385-5251949b1fd4.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/lib/code-server/lib/node', 'MIRTE_FASTDDS': 'false', 'SYSTEMD_EXEC_PID': '690', 'ROS_LOG_DIR': '/tmp/ros', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'COLCON_LOG_PATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/log', 'COLCON_PREFIX_PATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install:/home/mirte/mirte_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'mirte', 'JOURNAL_STREAM': '9:12621', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/mirte/.local/share/code-server/User/globalStorage/github.copilot-chat/debugCommand:/home/mirte/.local/share/code-server/User/globalStorage/github.copilot-chat/copilotCli:/usr/lib/code-server/lib/vscode/bin/remote-cli:/home/mirte/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/mirte/.local/bin:/home/mirte/.local/bin', 'INVOCATION_ID': '5d0fb65aa7644db4a102903adcad0b11', 'MIRTE_USE_MULTIROBOT': 'false', 'VSCODE_PROXY_URI': 'http://10.194.3.114:8000/proxy/{{port}}/', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-7d486263a6.sock', 'NODE_EXEC_PATH': '/usr/lib/code-server/lib/node', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '7', 'AMENT_PREFIX_PATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing:/home/mirte/mirte_ws/install/mirte_bringup:/home/mirte/mirte_ws/install/web_video_server:/home/mirte/mirte_ws/install/rplidar_ros:/home/mirte/mirte_ws/install/orbbec_description:/home/mirte/mirte_ws/install/orbbec_camera:/home/mirte/mirte_ws/install/orbbec_camera_msgs:/home/mirte/mirte_ws/install/mirte_zenoh_setup:/home/mirte/mirte_ws/install/mirte_workshop:/home/mirte/mirte_ws/install/mirte_test:/home/mirte/mirte_ws/install/mirte_pioneer_description:/home/mirte/mirte_ws/install/mirte_navigation:/home/mirte/mirte_ws/install/mirte_moveit_config:/home/mirte/mirte_ws/install/mirte_master_description:/home/mirte/mirte_ws/install/mirte_location_markers:/home/mirte/mirte_ws/install/mirte_fastdds_discovery_setup:/home/mirte/mirte_ws/install/mirte_drawing:/opt/ros/humble', 'LC_MESSAGES': 'en_US.UTF-8', 'PKG_HOME': '/home/mirte/mirte_ws/install/mirte_zenoh_setup/share/mirte_zenoh_setup', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation', 'MIRTE_ZENOH': 'false', 'LC_ALL': 'en_US.UTF-8', 'PYTHONPATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages:/home/mirte/mirte_ws/install/orbbec_camera_msgs/local/lib/python3.10/dist-packages:/home/mirte/mirte_ws/build/mirte_workshop:/home/mirte/mirte_ws/install/mirte_workshop/lib/python3.10/site-packages:/home/mirte/mirte_ws/build/mirte_test:/home/mirte/mirte_ws/install/mirte_test/lib/python3.10/site-packages:/home/mirte/mirte_ws/build/mirte_navigation:/home/mirte/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages:/home/mirte/mirte_ws/install/mirte_location_markers/local/lib/python3.10/dist-packages:/home/mirte/mirte_ws/build/mirte_drawing:/home/mirte/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/mirte/mirte_ws/install/mirte_bringup:/home/mirte/mirte_ws/install/web_video_server:/home/mirte/mirte_ws/install/rplidar_ros:/home/mirte/mirte_ws/install/orbbec_description:/home/mirte/mirte_ws/install/orbbec_camera:/home/mirte/mirte_ws/install/orbbec_camera_msgs:/home/mirte/mirte_ws/install/mirte_zenoh_setup:/home/mirte/mirte_ws/install/mirte_pioneer_description:/home/mirte/mirte_ws/install/mirte_moveit_config:/home/mirte/mirte_ws/install/mirte_master_description:/home/mirte/mirte_ws/install/mirte_location_markers:/home/mirte/mirte_ws/install/mirte_fastdds_discovery_setup'}, 'shell': False}
+[24.496915] (-) TimerEvent: {}
+[24.640245] (mirte_statemachine) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/mirte_statemachine', 'build', '--build-base', '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build', 'install', '--record', '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/src/mirte_statemachine', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US.UTF-8', 'USER': 'mirte', 'GIT_ASKPASS': '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mirte/mirte_ws/install/web_video_server/lib:/home/mirte/mirte_ws/install/orbbec_camera/lib:/home/mirte/mirte_ws/install/orbbec_camera_msgs/lib:/home/mirte/mirte_ws/install/mirte_location_markers/lib:/opt/ros/humble/opt/zenoh_cpp_vendor/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/usr/lib/code-server/lib/vscode/bin/helpers/browser.sh', 'HOME': '/home/mirte', 'OLDPWD': '/home/mirte/Spatial-AI-group-1', 'TERM_PROGRAM_VERSION': '1.116.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-227d43d0-5836-4523-a385-5251949b1fd4.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/lib/code-server/lib/node', 'MIRTE_FASTDDS': 'false', 'SYSTEMD_EXEC_PID': '690', 'ROS_LOG_DIR': '/tmp/ros', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'COLCON_LOG_PATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/log', 'COLCON_PREFIX_PATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install:/home/mirte/mirte_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'mirte', 'JOURNAL_STREAM': '9:12621', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/mirte/.local/share/code-server/User/globalStorage/github.copilot-chat/debugCommand:/home/mirte/.local/share/code-server/User/globalStorage/github.copilot-chat/copilotCli:/usr/lib/code-server/lib/vscode/bin/remote-cli:/home/mirte/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/mirte/.local/bin:/home/mirte/.local/bin', 'INVOCATION_ID': '5d0fb65aa7644db4a102903adcad0b11', 'MIRTE_USE_MULTIROBOT': 'false', 'VSCODE_PROXY_URI': 'http://10.194.3.114:8000/proxy/{{port}}/', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-7d486263a6.sock', 'NODE_EXEC_PATH': '/usr/lib/code-server/lib/node', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '7', 'AMENT_PREFIX_PATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing:/home/mirte/mirte_ws/install/mirte_bringup:/home/mirte/mirte_ws/install/web_video_server:/home/mirte/mirte_ws/install/rplidar_ros:/home/mirte/mirte_ws/install/orbbec_description:/home/mirte/mirte_ws/install/orbbec_camera:/home/mirte/mirte_ws/install/orbbec_camera_msgs:/home/mirte/mirte_ws/install/mirte_zenoh_setup:/home/mirte/mirte_ws/install/mirte_workshop:/home/mirte/mirte_ws/install/mirte_test:/home/mirte/mirte_ws/install/mirte_pioneer_description:/home/mirte/mirte_ws/install/mirte_navigation:/home/mirte/mirte_ws/install/mirte_moveit_config:/home/mirte/mirte_ws/install/mirte_master_description:/home/mirte/mirte_ws/install/mirte_location_markers:/home/mirte/mirte_ws/install/mirte_fastdds_discovery_setup:/home/mirte/mirte_ws/install/mirte_drawing:/opt/ros/humble', 'LC_MESSAGES': 'en_US.UTF-8', 'PKG_HOME': '/home/mirte/mirte_ws/install/mirte_zenoh_setup/share/mirte_zenoh_setup', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine', 'MIRTE_ZENOH': 'false', 'LC_ALL': 'en_US.UTF-8', 'PYTHONPATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages:/home/mirte/mirte_ws/install/orbbec_camera_msgs/local/lib/python3.10/dist-packages:/home/mirte/mirte_ws/build/mirte_workshop:/home/mirte/mirte_ws/install/mirte_workshop/lib/python3.10/site-packages:/home/mirte/mirte_ws/build/mirte_test:/home/mirte/mirte_ws/install/mirte_test/lib/python3.10/site-packages:/home/mirte/mirte_ws/build/mirte_navigation:/home/mirte/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages:/home/mirte/mirte_ws/install/mirte_location_markers/local/lib/python3.10/dist-packages:/home/mirte/mirte_ws/build/mirte_drawing:/home/mirte/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/mirte/mirte_ws/install/mirte_bringup:/home/mirte/mirte_ws/install/web_video_server:/home/mirte/mirte_ws/install/rplidar_ros:/home/mirte/mirte_ws/install/orbbec_description:/home/mirte/mirte_ws/install/orbbec_camera:/home/mirte/mirte_ws/install/orbbec_camera_msgs:/home/mirte/mirte_ws/install/mirte_zenoh_setup:/home/mirte/mirte_ws/install/mirte_pioneer_description:/home/mirte/mirte_ws/install/mirte_moveit_config:/home/mirte/mirte_ws/install/mirte_master_description:/home/mirte/mirte_ws/install/mirte_location_markers:/home/mirte/mirte_ws/install/mirte_fastdds_discovery_setup'}, 'shell': False}
+[24.705620] (-) TimerEvent: {}
+[24.735507] (mirte_drawing) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/mirte_drawing', 'build', '--build-base', '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build', 'install', '--record', '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/src/mirte_drawing', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US.UTF-8', 'USER': 'mirte', 'GIT_ASKPASS': '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mirte/mirte_ws/install/web_video_server/lib:/home/mirte/mirte_ws/install/orbbec_camera/lib:/home/mirte/mirte_ws/install/orbbec_camera_msgs/lib:/home/mirte/mirte_ws/install/mirte_location_markers/lib:/opt/ros/humble/opt/zenoh_cpp_vendor/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/usr/lib/code-server/lib/vscode/bin/helpers/browser.sh', 'HOME': '/home/mirte', 'OLDPWD': '/home/mirte/Spatial-AI-group-1', 'TERM_PROGRAM_VERSION': '1.116.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-227d43d0-5836-4523-a385-5251949b1fd4.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/lib/code-server/lib/node', 'MIRTE_FASTDDS': 'false', 'SYSTEMD_EXEC_PID': '690', 'ROS_LOG_DIR': '/tmp/ros', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'COLCON_LOG_PATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/log', 'COLCON_PREFIX_PATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install:/home/mirte/mirte_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'mirte', 'JOURNAL_STREAM': '9:12621', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/mirte/.local/share/code-server/User/globalStorage/github.copilot-chat/debugCommand:/home/mirte/.local/share/code-server/User/globalStorage/github.copilot-chat/copilotCli:/usr/lib/code-server/lib/vscode/bin/remote-cli:/home/mirte/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/mirte/.local/bin:/home/mirte/.local/bin', 'INVOCATION_ID': '5d0fb65aa7644db4a102903adcad0b11', 'MIRTE_USE_MULTIROBOT': 'false', 'VSCODE_PROXY_URI': 'http://10.194.3.114:8000/proxy/{{port}}/', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-7d486263a6.sock', 'NODE_EXEC_PATH': '/usr/lib/code-server/lib/node', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '7', 'AMENT_PREFIX_PATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing:/home/mirte/mirte_ws/install/mirte_bringup:/home/mirte/mirte_ws/install/web_video_server:/home/mirte/mirte_ws/install/rplidar_ros:/home/mirte/mirte_ws/install/orbbec_description:/home/mirte/mirte_ws/install/orbbec_camera:/home/mirte/mirte_ws/install/orbbec_camera_msgs:/home/mirte/mirte_ws/install/mirte_zenoh_setup:/home/mirte/mirte_ws/install/mirte_workshop:/home/mirte/mirte_ws/install/mirte_test:/home/mirte/mirte_ws/install/mirte_pioneer_description:/home/mirte/mirte_ws/install/mirte_navigation:/home/mirte/mirte_ws/install/mirte_moveit_config:/home/mirte/mirte_ws/install/mirte_master_description:/home/mirte/mirte_ws/install/mirte_location_markers:/home/mirte/mirte_ws/install/mirte_fastdds_discovery_setup:/home/mirte/mirte_ws/install/mirte_drawing:/opt/ros/humble', 'LC_MESSAGES': 'en_US.UTF-8', 'PKG_HOME': '/home/mirte/mirte_ws/install/mirte_zenoh_setup/share/mirte_zenoh_setup', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing', 'MIRTE_ZENOH': 'false', 'LC_ALL': 'en_US.UTF-8', 'PYTHONPATH': '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages:/home/mirte/mirte_ws/install/orbbec_camera_msgs/local/lib/python3.10/dist-packages:/home/mirte/mirte_ws/build/mirte_workshop:/home/mirte/mirte_ws/install/mirte_workshop/lib/python3.10/site-packages:/home/mirte/mirte_ws/build/mirte_test:/home/mirte/mirte_ws/install/mirte_test/lib/python3.10/site-packages:/home/mirte/mirte_ws/build/mirte_navigation:/home/mirte/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages:/home/mirte/mirte_ws/install/mirte_location_markers/local/lib/python3.10/dist-packages:/home/mirte/mirte_ws/build/mirte_drawing:/home/mirte/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/mirte/mirte_ws/install/mirte_bringup:/home/mirte/mirte_ws/install/web_video_server:/home/mirte/mirte_ws/install/rplidar_ros:/home/mirte/mirte_ws/install/orbbec_description:/home/mirte/mirte_ws/install/orbbec_camera:/home/mirte/mirte_ws/install/orbbec_camera_msgs:/home/mirte/mirte_ws/install/mirte_zenoh_setup:/home/mirte/mirte_ws/install/mirte_pioneer_description:/home/mirte/mirte_ws/install/mirte_moveit_config:/home/mirte/mirte_ws/install/mirte_master_description:/home/mirte/mirte_ws/install/mirte_location_markers:/home/mirte/mirte_ws/install/mirte_fastdds_discovery_setup'}, 'shell': False}
+[24.807764] (-) TimerEvent: {}
+[24.920084] (-) TimerEvent: {}
+[25.033926] (-) TimerEvent: {}
+[25.137804] (-) TimerEvent: {}
+[25.251550] (-) TimerEvent: {}
+[25.358566] (-) TimerEvent: {}
+[25.510980] (-) TimerEvent: {}
+[25.612816] (-) TimerEvent: {}
+[25.726328] (-) TimerEvent: {}
+[25.833314] (-) TimerEvent: {}
+[25.935247] (-) TimerEvent: {}
+[26.068927] (-) TimerEvent: {}
+[26.173277] (-) TimerEvent: {}
+[26.274923] (-) TimerEvent: {}
+[26.376720] (-) TimerEvent: {}
+[26.487252] (-) TimerEvent: {}
+[26.595273] (-) TimerEvent: {}
+[26.715311] (-) TimerEvent: {}
+[26.832413] (-) TimerEvent: {}
+[26.941268] (-) TimerEvent: {}
+[27.045893] (-) TimerEvent: {}
+[27.149673] (-) TimerEvent: {}
+[27.256462] (-) TimerEvent: {}
+[27.360574] (-) TimerEvent: {}
+[27.467647] (-) TimerEvent: {}
+[27.579706] (-) TimerEvent: {}
+[27.688649] (-) TimerEvent: {}
+[27.792507] (-) TimerEvent: {}
+[27.896588] (-) TimerEvent: {}
+[28.004891] (-) TimerEvent: {}
+[28.120304] (-) TimerEvent: {}
+[28.226775] (-) TimerEvent: {}
+[28.342523] (-) TimerEvent: {}
+[28.446893] (-) TimerEvent: {}
+[28.551875] (-) TimerEvent: {}
+[28.665513] (-) TimerEvent: {}
+[28.771709] (-) TimerEvent: {}
+[28.880126] (-) TimerEvent: {}
+[28.988037] (-) TimerEvent: {}
+[29.093562] (-) TimerEvent: {}
+[29.201402] (-) TimerEvent: {}
+[29.307751] (-) TimerEvent: {}
+[29.414492] (-) TimerEvent: {}
+[29.521165] (-) TimerEvent: {}
+[29.627277] (-) TimerEvent: {}
+[29.733538] (-) TimerEvent: {}
+[29.840339] (-) TimerEvent: {}
+[29.955771] (-) TimerEvent: {}
+[30.072234] (-) TimerEvent: {}
+[30.175931] (-) TimerEvent: {}
+[30.289866] (-) TimerEvent: {}
+[30.394533] (-) TimerEvent: {}
+[30.517439] (-) TimerEvent: {}
+[30.633229] (-) TimerEvent: {}
+[30.755397] (-) TimerEvent: {}
+[30.875646] (-) TimerEvent: {}
+[30.993225] (-) TimerEvent: {}
+[31.089905] (mirte_drawing) StdoutLine: {'line': b'running egg_info\n'}
+[31.091790] (-) TimerEvent: {}
+[31.109165] (mirte_drawing) StdoutLine: {'line': b'creating ../../build/mirte_drawing/mirte_drawing.egg-info\n'}
+[31.116495] (mirte_drawing) StdoutLine: {'line': b'writing ../../build/mirte_drawing/mirte_drawing.egg-info/PKG-INFO\n'}
+[31.118175] (mirte_drawing) StdoutLine: {'line': b'writing dependency_links to ../../build/mirte_drawing/mirte_drawing.egg-info/dependency_links.txt\n'}
+[31.119455] (mirte_drawing) StdoutLine: {'line': b'writing entry points to ../../build/mirte_drawing/mirte_drawing.egg-info/entry_points.txt\n'}
+[31.134713] (mirte_drawing) StdoutLine: {'line': b'writing requirements to ../../build/mirte_drawing/mirte_drawing.egg-info/requires.txt\n'}
+[31.145624] (mirte_drawing) StdoutLine: {'line': b'writing top-level names to ../../build/mirte_drawing/mirte_drawing.egg-info/top_level.txt\n'}
+[31.147562] (mirte_drawing) StdoutLine: {'line': b"writing manifest file '../../build/mirte_drawing/mirte_drawing.egg-info/SOURCES.txt'\n"}
+[31.161912] (mirte_drawing) StdoutLine: {'line': b"reading manifest file '../../build/mirte_drawing/mirte_drawing.egg-info/SOURCES.txt'\n"}
+[31.184669] (mirte_drawing) StdoutLine: {'line': b"writing manifest file '../../build/mirte_drawing/mirte_drawing.egg-info/SOURCES.txt'\n"}
+[31.196175] (-) TimerEvent: {}
+[31.215538] (mirte_drawing) StdoutLine: {'line': b'running build\n'}
+[31.240809] (mirte_drawing) StdoutLine: {'line': b'running build_py\n'}
+[31.250774] (mirte_drawing) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build\n'}
+[31.260559] (mirte_drawing) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib\n'}
+[31.265137] (mirte_drawing) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing\n'}
+[31.273555] (mirte_drawing) StdoutLine: {'line': b'copying mirte_drawing/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing\n'}
+[31.276750] (mirte_drawing) StdoutLine: {'line': b'copying mirte_drawing/SandDrawer.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing\n'}
+[31.278840] (mirte_drawing) StdoutLine: {'line': b'running install\n'}
+[31.280324] (mirte_drawing) StdoutLine: {'line': b'running install_lib\n'}
+[31.285602] (mirte_drawing) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing\n'}
+[31.287409] (mirte_drawing) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing\n'}
+[31.288875] (mirte_drawing) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/build/lib/mirte_drawing/SandDrawer.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing\n'}
+[31.290700] (mirte_drawing) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing/__init__.py to __init__.cpython-310.pyc\n'}
+[31.292215] (mirte_drawing) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing/SandDrawer.py to SandDrawer.cpython-310.pyc\n'}
+[31.298725] (-) TimerEvent: {}
+[31.310942] (mirte_drawing) StdoutLine: {'line': b'running install_data\n'}
+[31.316905] (mirte_drawing) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/ament_index\n'}
+[31.324932] (mirte_drawing) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/ament_index/resource_index\n'}
+[31.329346] (mirte_drawing) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/ament_index/resource_index/packages\n'}
+[31.334274] (mirte_drawing) StdoutLine: {'line': b'copying resource/mirte_drawing -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/ament_index/resource_index/packages\n'}
+[31.347796] (mirte_drawing) StdoutLine: {'line': b'copying package.xml -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/share/mirte_drawing\n'}
+[31.356851] (mirte_drawing) StdoutLine: {'line': b'running install_egg_info\n'}
+[31.364421] (mirte_drawing) StdoutLine: {'line': b'Copying ../../build/mirte_drawing/mirte_drawing.egg-info to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/python3.10/site-packages/mirte_drawing-0.0.0-py3.10.egg-info\n'}
+[31.369554] (mirte_drawing) StdoutLine: {'line': b'running install_scripts\n'}
+[31.399334] (-) TimerEvent: {}
+[31.509938] (-) TimerEvent: {}
+[31.633452] (-) TimerEvent: {}
+[31.693463] (mirte_drawing) StdoutLine: {'line': b'Installing SandDrawer script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_drawing/lib/mirte_drawing\n'}
+[31.701398] (mirte_drawing) StdoutLine: {'line': b"writing list of installed files to '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_drawing/install.log'\n"}
+[31.735548] (-) TimerEvent: {}
+[31.772620] (mirte_perception) StdoutLine: {'line': b'running egg_info\n'}
+[31.797374] (mirte_perception) StdoutLine: {'line': b'creating ../../build/mirte_perception/mirte_perception.egg-info\n'}
+[31.801354] (mirte_perception) StdoutLine: {'line': b'writing ../../build/mirte_perception/mirte_perception.egg-info/PKG-INFO\n'}
+[31.816137] (mirte_perception) StdoutLine: {'line': b'writing dependency_links to ../../build/mirte_perception/mirte_perception.egg-info/dependency_links.txt\n'}
+[31.831322] (mirte_perception) StdoutLine: {'line': b'writing entry points to ../../build/mirte_perception/mirte_perception.egg-info/entry_points.txt\n'}
+[31.833903] (mirte_perception) StdoutLine: {'line': b'writing requirements to ../../build/mirte_perception/mirte_perception.egg-info/requires.txt\n'}
+[31.836200] (-) TimerEvent: {}
+[31.839589] (mirte_perception) StdoutLine: {'line': b'writing top-level names to ../../build/mirte_perception/mirte_perception.egg-info/top_level.txt\n'}
+[31.841379] (mirte_perception) StdoutLine: {'line': b"writing manifest file '../../build/mirte_perception/mirte_perception.egg-info/SOURCES.txt'\n"}
+[31.879403] (mirte_perception) StdoutLine: {'line': b"reading manifest file '../../build/mirte_perception/mirte_perception.egg-info/SOURCES.txt'\n"}
+[31.896363] (mirte_perception) StdoutLine: {'line': b"writing manifest file '../../build/mirte_perception/mirte_perception.egg-info/SOURCES.txt'\n"}
+[31.900423] (mirte_perception) StdoutLine: {'line': b'running build\n'}
+[31.912251] (mirte_perception) StdoutLine: {'line': b'running build_py\n'}
+[31.915561] (mirte_perception) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build\n'}
+[31.926191] (mirte_perception) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib\n'}
+[31.933494] (mirte_perception) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception\n'}
+[31.934842] (mirte_perception) StdoutLine: {'line': b'copying mirte_perception/ArucoDetection.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception\n'}
+[31.942481] (-) TimerEvent: {}
+[31.948528] (mirte_perception) StdoutLine: {'line': b'copying mirte_perception/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception\n'}
+[31.957547] (mirte_perception) StdoutLine: {'line': b'copying mirte_perception/ObjectDetection.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception\n'}
+[31.968734] (mirte_perception) StdoutLine: {'line': b'copying mirte_perception/ArucoDetectionSand.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception\n'}
+[31.972692] (mirte_perception) StdoutLine: {'line': b'copying mirte_perception/TextDetection.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception\n'}
+[31.999262] (mirte_perception) StdoutLine: {'line': b'running install\n'}
+[32.008813] (mirte_perception) StdoutLine: {'line': b'running install_lib\n'}
+[32.013947] (mirte_perception) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception\n'}
+[32.029616] (mirte_perception) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception/ArucoDetection.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception\n'}
+[32.032189] (mirte_perception) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception\n'}
+[32.037385] (mirte_perception) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception/ObjectDetection.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception\n'}
+[32.038943] (mirte_perception) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception/ArucoDetectionSand.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception\n'}
+[32.040399] (mirte_perception) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception/TextDetection.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception\n'}
+[32.052799] (-) TimerEvent: {}
+[32.055760] (mirte_perception) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception/ArucoDetection.py to ArucoDetection.cpython-310.pyc\n'}
+[32.057707] (mirte_perception) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception/__init__.py to __init__.cpython-310.pyc\n'}
+[32.067639] (mirte_perception) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception/ObjectDetection.py to ObjectDetection.cpython-310.pyc\n'}
+[32.123570] (mirte_perception) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception/ArucoDetectionSand.py to ArucoDetectionSand.cpython-310.pyc\n'}
+[32.143604] (mirte_perception) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception/TextDetection.py to TextDetection.cpython-310.pyc\n'}
+[32.154688] (-) TimerEvent: {}
+[32.166315] (mirte_drawing) CommandEnded: {'returncode': 0}
+[32.183391] (mirte_perception) StdoutLine: {'line': b'running install_data\n'}
+[32.205020] (mirte_perception) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/share/ament_index\n'}
+[32.232797] (mirte_perception) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/share/ament_index/resource_index\n'}
+[32.235434] (mirte_perception) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/share/ament_index/resource_index/packages\n'}
+[32.237484] (mirte_perception) StdoutLine: {'line': b'copying resource/mirte_perception -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/share/ament_index/resource_index/packages\n'}
+[32.238889] (mirte_perception) StdoutLine: {'line': b'copying package.xml -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/share/mirte_perception\n'}
+[32.240233] (mirte_perception) StdoutLine: {'line': b'running install_egg_info\n'}
+[32.251121] (mirte_perception) StdoutLine: {'line': b'Copying ../../build/mirte_perception/mirte_perception.egg-info to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception-0.0.0-py3.10.egg-info\n'}
+[32.264520] (mirte_perception) StdoutLine: {'line': b'running install_scripts\n'}
+[32.266124] (-) TimerEvent: {}
+[32.371977] (-) TimerEvent: {}
+[32.491147] (-) TimerEvent: {}
+[32.618804] (-) TimerEvent: {}
+[32.633321] (mirte_perception) StdoutLine: {'line': b'Installing ArucoDetectionSand script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/mirte_perception\n'}
+[32.653486] (mirte_perception) StdoutLine: {'line': b'Installing ArucoDetector script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/mirte_perception\n'}
+[32.657492] (mirte_perception) StdoutLine: {'line': b'Installing GoalGenerator script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/mirte_perception\n'}
+[32.668305] (mirte_perception) StdoutLine: {'line': b'Installing TextDetector script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/mirte_perception\n'}
+[32.674354] (mirte_perception) StdoutLine: {'line': b"writing list of installed files to '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/install.log'\n"}
+[32.676809] (mirte_drawing) JobEnded: {'identifier': 'mirte_drawing', 'rc': 0}
+[32.725801] (-) TimerEvent: {}
+[32.828520] (-) TimerEvent: {}
+[32.931127] (-) TimerEvent: {}
+[33.033407] (-) TimerEvent: {}
+[33.135380] (-) TimerEvent: {}
+[33.191316] (mirte_perception) CommandEnded: {'returncode': 0}
+[33.236861] (-) TimerEvent: {}
+[33.324080] (mirte_perception) JobEnded: {'identifier': 'mirte_perception', 'rc': 0}
+[33.337782] (-) TimerEvent: {}
+[33.341835] (mirte_navigation) StdoutLine: {'line': b'running egg_info\n'}
+[33.349659] (mirte_navigation) StdoutLine: {'line': b'creating ../../build/mirte_navigation/mirte_navigation.egg-info\n'}
+[33.358625] (mirte_navigation) StdoutLine: {'line': b'writing ../../build/mirte_navigation/mirte_navigation.egg-info/PKG-INFO\n'}
+[33.369883] (mirte_navigation) StdoutLine: {'line': b'writing dependency_links to ../../build/mirte_navigation/mirte_navigation.egg-info/dependency_links.txt\n'}
+[33.373496] (mirte_navigation) StdoutLine: {'line': b'writing entry points to ../../build/mirte_navigation/mirte_navigation.egg-info/entry_points.txt\n'}
+[33.376092] (mirte_navigation) StdoutLine: {'line': b'writing requirements to ../../build/mirte_navigation/mirte_navigation.egg-info/requires.txt\n'}
+[33.377823] (mirte_navigation) StdoutLine: {'line': b'writing top-level names to ../../build/mirte_navigation/mirte_navigation.egg-info/top_level.txt\n'}
+[33.380400] (mirte_navigation) StdoutLine: {'line': b"writing manifest file '../../build/mirte_navigation/mirte_navigation.egg-info/SOURCES.txt'\n"}
+[33.399753] (mirte_navigation) StdoutLine: {'line': b"reading manifest file '../../build/mirte_navigation/mirte_navigation.egg-info/SOURCES.txt'\n"}
+[33.417756] (mirte_navigation) StdoutLine: {'line': b"writing manifest file '../../build/mirte_navigation/mirte_navigation.egg-info/SOURCES.txt'\n"}
+[33.423382] (mirte_navigation) StdoutLine: {'line': b'running build\n'}
+[33.426448] (mirte_navigation) StdoutLine: {'line': b'running build_py\n'}
+[33.429168] (mirte_navigation) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build\n'}
+[33.430849] (mirte_navigation) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib\n'}
+[33.432358] (mirte_navigation) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation\n'}
+[33.434373] (mirte_navigation) StdoutLine: {'line': b'copying mirte_navigation/OrientationController.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation\n'}
+[33.436018] (mirte_navigation) StdoutLine: {'line': b'copying mirte_navigation/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation\n'}
+[33.437483] (mirte_navigation) StdoutLine: {'line': b'copying mirte_navigation/CrabWalk.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation\n'}
+[33.441907] (-) TimerEvent: {}
+[33.445523] (mirte_navigation) StdoutLine: {'line': b'copying mirte_navigation/WhiteBoardTracker.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation\n'}
+[33.455085] (mirte_navigation) StdoutLine: {'line': b'running install\n'}
+[33.458643] (mirte_navigation) StdoutLine: {'line': b'running install_lib\n'}
+[33.459934] (mirte_navigation) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation\n'}
+[33.461185] (mirte_navigation) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation/OrientationController.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation\n'}
+[33.462770] (mirte_navigation) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation\n'}
+[33.464959] (mirte_navigation) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation/CrabWalk.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation\n'}
+[33.466826] (mirte_statemachine) StdoutLine: {'line': b'running egg_info\n'}
+[33.468368] (mirte_navigation) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/build/lib/mirte_navigation/WhiteBoardTracker.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation\n'}
+[33.471113] (mirte_statemachine) StdoutLine: {'line': b'creating ../../build/mirte_statemachine/mirte_statemachine.egg-info\n'}
+[33.473056] (mirte_navigation) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation/OrientationController.py to OrientationController.cpython-310.pyc\n'}
+[33.477147] (mirte_statemachine) StdoutLine: {'line': b'writing ../../build/mirte_statemachine/mirte_statemachine.egg-info/PKG-INFO\n'}
+[33.488351] (mirte_statemachine) StdoutLine: {'line': b'writing dependency_links to ../../build/mirte_statemachine/mirte_statemachine.egg-info/dependency_links.txt\n'}
+[33.494048] (mirte_statemachine) StdoutLine: {'line': b'writing entry points to ../../build/mirte_statemachine/mirte_statemachine.egg-info/entry_points.txt\n'}
+[33.497138] (mirte_statemachine) StdoutLine: {'line': b'writing requirements to ../../build/mirte_statemachine/mirte_statemachine.egg-info/requires.txt\n'}
+[33.498616] (mirte_statemachine) StdoutLine: {'line': b'writing top-level names to ../../build/mirte_statemachine/mirte_statemachine.egg-info/top_level.txt\n'}
+[33.500016] (mirte_statemachine) StdoutLine: {'line': b"writing manifest file '../../build/mirte_statemachine/mirte_statemachine.egg-info/SOURCES.txt'\n"}
+[33.507492] (mirte_navigation) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation/__init__.py to __init__.cpython-310.pyc\n'}
+[33.509631] (mirte_navigation) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation/CrabWalk.py to CrabWalk.cpython-310.pyc\n'}
+[33.511403] (mirte_navigation) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation/WhiteBoardTracker.py to WhiteBoardTracker.cpython-310.pyc\n'}
+[33.512508] (mirte_statemachine) StdoutLine: {'line': b"reading manifest file '../../build/mirte_statemachine/mirte_statemachine.egg-info/SOURCES.txt'\n"}
+[33.518759] (mirte_statemachine) StdoutLine: {'line': b"writing manifest file '../../build/mirte_statemachine/mirte_statemachine.egg-info/SOURCES.txt'\n"}
+[33.522283] (mirte_navigation) StdoutLine: {'line': b'running install_data\n'}
+[33.525786] (mirte_statemachine) StdoutLine: {'line': b'running build\n'}
+[33.538911] (mirte_statemachine) StdoutLine: {'line': b'running build_py\n'}
+[33.542384] (-) TimerEvent: {}
+[33.548342] (mirte_statemachine) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build\n'}
+[33.551615] (mirte_statemachine) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build/lib\n'}
+[33.556417] (mirte_navigation) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/ament_index\n'}
+[33.559466] (mirte_navigation) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/ament_index/resource_index\n'}
+[33.563467] (mirte_navigation) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/ament_index/resource_index/packages\n'}
+[33.567260] (mirte_navigation) StdoutLine: {'line': b'copying resource/mirte_navigation -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/ament_index/resource_index/packages\n'}
+[33.575626] (mirte_navigation) StdoutLine: {'line': b'copying package.xml -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/mirte_navigation\n'}
+[33.580477] (mirte_statemachine) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build/lib/mirte_statemachine\n'}
+[33.582484] (mirte_statemachine) StdoutLine: {'line': b'copying mirte_statemachine/StateMachine.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build/lib/mirte_statemachine\n'}
+[33.585257] (mirte_statemachine) StdoutLine: {'line': b'copying mirte_statemachine/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build/lib/mirte_statemachine\n'}
+[33.598383] (mirte_statemachine) StdoutLine: {'line': b'running install\n'}
+[33.600299] (mirte_navigation) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/mirte_navigation/launch\n'}
+[33.612375] (mirte_navigation) StdoutLine: {'line': b'copying launch/startup.launch.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/share/mirte_navigation/launch\n'}
+[33.616151] (mirte_navigation) StdoutLine: {'line': b'running install_egg_info\n'}
+[33.621514] (mirte_statemachine) StdoutLine: {'line': b'running install_lib\n'}
+[33.626267] (mirte_statemachine) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages/mirte_statemachine\n'}
+[33.634858] (mirte_statemachine) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build/lib/mirte_statemachine/StateMachine.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages/mirte_statemachine\n'}
+[33.636767] (mirte_statemachine) StdoutLine: {'line': b'copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/build/lib/mirte_statemachine/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages/mirte_statemachine\n'}
+[33.638637] (mirte_statemachine) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages/mirte_statemachine/StateMachine.py to StateMachine.cpython-310.pyc\n'}
+[33.640121] (mirte_statemachine) StdoutLine: {'line': b'byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages/mirte_statemachine/__init__.py to __init__.cpython-310.pyc\n'}
+[33.643177] (-) TimerEvent: {}
+[33.648513] (mirte_statemachine) StdoutLine: {'line': b'running install_data\n'}
+[33.650301] (mirte_statemachine) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/share/ament_index\n'}
+[33.652186] (mirte_statemachine) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/share/ament_index/resource_index\n'}
+[33.653871] (mirte_statemachine) StdoutLine: {'line': b'creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/share/ament_index/resource_index/packages\n'}
+[33.657079] (mirte_statemachine) StdoutLine: {'line': b'copying resource/mirte_statemachine -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/share/ament_index/resource_index/packages\n'}
+[33.665204] (mirte_statemachine) StdoutLine: {'line': b'copying package.xml -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/share/mirte_statemachine\n'}
+[33.667440] (mirte_statemachine) StdoutLine: {'line': b'running install_egg_info\n'}
+[33.671570] (mirte_navigation) StdoutLine: {'line': b'Copying ../../build/mirte_navigation/mirte_navigation.egg-info to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/python3.10/site-packages/mirte_navigation-0.0.0-py3.10.egg-info\n'}
+[33.673299] (mirte_navigation) StdoutLine: {'line': b'running install_scripts\n'}
+[33.681590] (mirte_statemachine) StdoutLine: {'line': b'Copying ../../build/mirte_statemachine/mirte_statemachine.egg-info to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/python3.10/site-packages/mirte_statemachine-0.0.0-py3.10.egg-info\n'}
+[33.684288] (mirte_statemachine) StdoutLine: {'line': b'running install_scripts\n'}
+[33.743496] (-) TimerEvent: {}
+[33.846275] (-) TimerEvent: {}
+[33.911247] (mirte_navigation) StdoutLine: {'line': b'Installing CrabWalk script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/mirte_navigation\n'}
+[33.913246] (mirte_navigation) StdoutLine: {'line': b'Installing OrientationController script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/mirte_navigation\n'}
+[33.916350] (mirte_navigation) StdoutLine: {'line': b'Installing WhiteBoardTracker script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_navigation/lib/mirte_navigation\n'}
+[33.920007] (mirte_navigation) StdoutLine: {'line': b"writing list of installed files to '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_navigation/install.log'\n"}
+[33.945513] (mirte_statemachine) StdoutLine: {'line': b'Installing StateManager script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_statemachine/lib/mirte_statemachine\n'}
+[33.956681] (-) TimerEvent: {}
+[33.962624] (mirte_statemachine) StdoutLine: {'line': b"writing list of installed files to '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_statemachine/install.log'\n"}
+[34.048063] (-) TimerEvent: {}
+[34.150502] (-) TimerEvent: {}
+[34.255036] (-) TimerEvent: {}
+[34.324481] (mirte_navigation) CommandEnded: {'returncode': 0}
+[34.355256] (-) TimerEvent: {}
+[34.406773] (mirte_navigation) JobEnded: {'identifier': 'mirte_navigation', 'rc': 0}
+[34.420371] (mirte_statemachine) CommandEnded: {'returncode': 0}
+[34.456060] (-) TimerEvent: {}
+[34.493794] (mirte_statemachine) JobEnded: {'identifier': 'mirte_statemachine', 'rc': 0}
+[34.500689] (-) EventReactorShutdown: {}

@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mirte-perception
+Version: 0.0.0
+Summary: Determines the position of objects in the environment
+Home-page: UNKNOWN
+Maintainer: Wout
+Maintainer-email: wbarrez@student.tudelft.nl
+License: MIT
+Platform: UNKNOWN
+Provides-Extra: test
+
+UNKNOWN
+

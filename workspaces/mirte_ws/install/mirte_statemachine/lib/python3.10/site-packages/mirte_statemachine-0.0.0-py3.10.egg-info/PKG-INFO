@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mirte-statemachine
+Version: 0.0.0
+Summary: State machine for the MIRTE project
+Home-page: UNKNOWN
+Maintainer: Wout
+Maintainer-email: wbarrez@student.tudelft.nl
+License: MIT
+Platform: UNKNOWN
+Provides-Extra: test
+
+UNKNOWN
+

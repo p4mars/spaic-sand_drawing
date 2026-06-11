@@ -1,0 +1,49 @@
+[24.061s] Invoking command in '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/src/mirte_perception': PYTHONPATH=/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mirte_perception build --build-base /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build install --record /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/install.log --single-version-externally-managed install_data
+[31.561s] running egg_info
+[31.585s] creating ../../build/mirte_perception/mirte_perception.egg-info
+[31.593s] writing ../../build/mirte_perception/mirte_perception.egg-info/PKG-INFO
+[31.609s] writing dependency_links to ../../build/mirte_perception/mirte_perception.egg-info/dependency_links.txt
+[31.619s] writing entry points to ../../build/mirte_perception/mirte_perception.egg-info/entry_points.txt
+[31.622s] writing requirements to ../../build/mirte_perception/mirte_perception.egg-info/requires.txt
+[31.627s] writing top-level names to ../../build/mirte_perception/mirte_perception.egg-info/top_level.txt
+[31.632s] writing manifest file '../../build/mirte_perception/mirte_perception.egg-info/SOURCES.txt'
+[31.667s] reading manifest file '../../build/mirte_perception/mirte_perception.egg-info/SOURCES.txt'
+[31.686s] writing manifest file '../../build/mirte_perception/mirte_perception.egg-info/SOURCES.txt'
+[31.695s] running build
+[31.700s] running build_py
+[31.712s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build
+[31.719s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib
+[31.721s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception
+[31.728s] copying mirte_perception/ArucoDetection.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception
+[31.743s] copying mirte_perception/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception
+[31.745s] copying mirte_perception/ObjectDetection.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception
+[31.759s] copying mirte_perception/ArucoDetectionSand.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception
+[31.785s] copying mirte_perception/TextDetection.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception
+[31.793s] running install
+[31.800s] running install_lib
+[31.815s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception
+[31.818s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception/ArucoDetection.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception
+[31.822s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception/__init__.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception
+[31.825s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception/ObjectDetection.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception
+[31.826s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception/ArucoDetectionSand.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception
+[31.835s] copying /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build/lib/mirte_perception/TextDetection.py -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception
+[31.843s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception/ArucoDetection.py to ArucoDetection.cpython-310.pyc
+[31.845s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception/__init__.py to __init__.cpython-310.pyc
+[31.855s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception/ObjectDetection.py to ObjectDetection.cpython-310.pyc
+[31.923s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception/ArucoDetectionSand.py to ArucoDetectionSand.cpython-310.pyc
+[31.937s] byte-compiling /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception/TextDetection.py to TextDetection.cpython-310.pyc
+[31.981s] running install_data
+[32.017s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/share/ament_index
+[32.021s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/share/ament_index/resource_index
+[32.023s] creating /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/share/ament_index/resource_index/packages
+[32.025s] copying resource/mirte_perception -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/share/ament_index/resource_index/packages
+[32.026s] copying package.xml -> /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/share/mirte_perception
+[32.037s] running install_egg_info
+[32.039s] Copying ../../build/mirte_perception/mirte_perception.egg-info to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages/mirte_perception-0.0.0-py3.10.egg-info
+[32.052s] running install_scripts
+[32.439s] Installing ArucoDetectionSand script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/mirte_perception
+[32.443s] Installing ArucoDetector script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/mirte_perception
+[32.445s] Installing GoalGenerator script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/mirte_perception
+[32.460s] Installing TextDetector script to /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/mirte_perception
+[32.463s] writing list of installed files to '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/install.log'
+[32.984s] Invoked command in '/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/src/mirte_perception' returned '0': PYTHONPATH=/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/install/mirte_perception/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mirte_perception build --build-base /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/build install --record /home/mirte/Spatial-AI-group-1/workspaces/mirte_ws/build/mirte_perception/install.log --single-version-externally-managed install_data
