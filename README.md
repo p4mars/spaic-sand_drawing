@@ -11,7 +11,7 @@ A fully autonomous robot system that reads a pattern from a whiteboard and repro
 - [Team & contributions](#team--contributions)
 - [Getting started](#getting-started)
 - [Running the system](#running-the-system)
-- [Development workflow](#development-workflow)
+- [Branches](#branches)
 
 ---
 
@@ -160,22 +160,15 @@ python3 ai_perception/TextDetectorLive.py
 
 ---
 
-## Development workflow
+## Branches
 
-We use Scrum with 1-week sprints managed in Trello.
-
-### Branches
-
-| Branch | Purpose |
-|--------|---------|
-| `main` | Stable, tested code only — never push directly |
-| `dev` | Integration branch — merge features here first |
-| `feature/navigation` | Module 1 & 2 — navigation and state machine |
-| `feature/detection` | Module 3 — perception and detection |
-| `feature/gripper` | Module 4 — arm control and drawing |
-
-### Pull request rules
-- Always branch from `dev`, not `main`
-- At least 1 reviewer must approve before merging
-- Code must be tested in simulation before merging to `dev`
-- Code must be tested on the real Mirte robot before merging to `main`
+| Branch | Description |
+|--------|-------------|
+| `main` | Stable, tested code |
+| `dev` | Integration branch |
+| `feature/slam` | Navigation and base control |
+| `feature/slam_2` | Navigation rework — unfinished |
+| `feature/gripper` | Arm control and sand drawing |
+| `feature/text-detection` | OCR and image detection |
+| `feature/integration` | State machine and full pipeline |
+| `feature/integration-test` | Integration testing |
