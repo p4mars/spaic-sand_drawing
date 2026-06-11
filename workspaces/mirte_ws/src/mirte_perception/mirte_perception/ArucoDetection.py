@@ -25,9 +25,9 @@ FOV_RAD = math.radians(FOV_DEG)
 IMAGE_WIDTH = 640
 IMAGE_HEIGHT = 480
 
-TARGET_MARKER_ID = 0
+TARGET_MARKER_ID = 10
 
-ACTIVE_STATE = "TRACK_SANDPIT"
+ACTIVE_STATE = "TRACK_WHITEBOARD"
 
 
 # ------------------------------------------------------------------
@@ -102,10 +102,8 @@ class ArucoGoalNode(Node):
                 corners,
                 ids.flatten()
             ):
-
                 if marker_id != TARGET_MARKER_ID:
                     continue
-
                 pts = marker_corners[0]
 
                 # Marker center

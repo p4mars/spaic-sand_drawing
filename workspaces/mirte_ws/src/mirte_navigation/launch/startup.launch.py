@@ -13,8 +13,8 @@ def generate_launch_description():
 
     detector = Node(
         package='mirte_perception',
-        executable='GoalGenerator',
-        name='GoalGenerator',
+        executable='ArucoDetector',
+        name='ArucoDetector',
         output='screen'
     )
 
@@ -27,14 +27,30 @@ def generate_launch_description():
 
     sandpit_tracker = Node(
         package='mirte_perception',
-        executable='ArucoDetector',
-        name='ArucoDetector',
+        executable='ArucoDetectionSand',
+        name='ArucoDetectionSand',
+        output='screen'
+    )
+
+    board_reader = Node(
+        package='mirte_perception',
+        executable='TextDetector',
+        name='TextDetector',
+        output='screen'
+    )
+
+    sand_drawer = Node(
+        package='mirte_drawing',
+        executable='SandDrawer',
+        name='SandDrawer',
         output='screen'
     )
 
     return LaunchDescription([
         state_manager,
-        detector,
         sandpit_tracker,
-        white_board_tracker
+        white_board_tracker,
+        detector,
+        board_reader,
+        sand_drawer
     ])

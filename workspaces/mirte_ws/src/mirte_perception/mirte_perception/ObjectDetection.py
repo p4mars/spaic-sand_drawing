@@ -166,6 +166,7 @@ class DetectorGoalNode(Node):
         """
         try:
             frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
+            frame = cv2.convertScaleAbs(frame, alpha=0.5, beta=-30)
 
             success, buffer = cv2.imencode(".jpg", frame)
             if not success:

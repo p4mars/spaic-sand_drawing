@@ -42,11 +42,11 @@ from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 # Time (s) given for the arm-raise trajectory to complete before the node
 # transitions to TRACK_WHITEBOARD.  Must match (or exceed) the trajectory's
 # time_from_start.sec value.
-ARM_RAISE_DURATION: int = 7
+ARM_RAISE_DURATION: int = 5
 
 # Delay (s) after node startup before the arm-raise sequence begins, giving
 # the arm controller time to come online.
-STARTUP_DELAY: float = 7.0
+STARTUP_DELAY: float = 3.0
 
 # Valid state transitions: maps each state to the state a DONE signal advances
 # it to, or None if DONE means shut down.
@@ -57,8 +57,10 @@ STARTUP_DELAY: float = 7.0
 # }
 _NEXT_STATE: dict[str, str | None] = {
     "RAISE_ARM":        "TRACK_WHITEBOARD",
-    "TRACK_WHITEBOARD": "TRACK_SANDPIT",
-    "TRACK_SANDPIT":  'DONE',   # DONE here → shutdown
+    "TRACK_WHITEBOARD": "READ_SANDPIT",
+    "READ_SANDPIT": "TRACK_SANDPIT",
+    "TRACK_SANDPIT": "DRAW_PATTERN",
+    "DRAW_PATTERN":  'DONE',   # DONE here → shutdown
 }
 
 
