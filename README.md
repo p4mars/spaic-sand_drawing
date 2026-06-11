@@ -165,6 +165,7 @@ python3 ai_perception/TextDetectorLive.py
 | Branch | Description |
 |--------|-------------|
 | `main` | Stable, tested code |
+| `FinalVersion` | Final version of the project |
 | `dev` | Integration branch |
 | `feature/slam` | Navigation and base control |
 | `feature/slam_2` | Navigation rework — unfinished |
