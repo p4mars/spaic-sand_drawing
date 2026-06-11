@@ -225,7 +225,7 @@ class WhiteBoardTracker(Node):
         if self.mode == "RECOVERY":
             elapsed = time.time() - self.recovery_start
             if elapsed < 5.0:
-                cmd.linear.x = -0.1
+                pass
             elif elapsed < 3.0:
                 cmd.angular.z = -0.4 if self.last_angle > 0 else -0.4
             else:

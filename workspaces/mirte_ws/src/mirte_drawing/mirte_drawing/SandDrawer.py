@@ -137,8 +137,8 @@ LETTER_PITCH:   float = LETTER_WIDTH + LETTER_GAP
 
 # Base velocity topic. This Gazebo sim exposes /cmd_vel (geometry_msgs/Twist);
 # the real robot / other setups may use /mirte_base_controller/cmd_vel_unstamped.
-BASE_CMD_TOPIC: str   = "/mirte_base_controller/cmd_vel"
-ODOM_TOPIC:     str   = "/mirte_base_controller/odom"
+BASE_CMD_TOPIC: str   = "/cmd_vel"
+ODOM_TOPIC:     str   = "/odom"
 STRAFE_SPEED:   float = 0.05  # base strafe speed (m/s)
 STRAFE_SIGN:    float = -1.0  # +1 = base moves left (+y); -1 = right. Flip if word is mirrored
 STRAFE_TIMEOUT: float = 15.0  # safety: max seconds for one strafe before giving up
