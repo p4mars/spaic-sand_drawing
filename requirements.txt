@@ -1,0 +1,41 @@
+# =============================================================================
+# Spatial AI Group 1 — Python Dependencies
+# =============================================================================
+# Install with:
+#   pip install -r requirements.txt
+#
+# Do NOT commit ai_env/ to git. See README for full setup instructions.
+# ROS 2 packages (rclpy, cv_bridge, tf2, etc.) are installed system-wide
+# via apt and are NOT listed here.
+# =============================================================================
+
+# --- Core vision & image processing ---
+opencv-python==4.10.0.84
+numpy==1.21.5
+pillow==12.2.0
+scipy==1.15.3
+matplotlib==3.10.9
+
+# --- Object detection (YOLO) ---
+# ultralytics is installed separately — see README for ARM/x86 instructions
+supervision==0.28.0
+inference-sdk==1.2.9
+
+# --- 3D transforms / geometry ---
+transforms3d==0.3.1
+
+# --- Utilities ---
+tqdm==4.67.1
+PyYAML==5.4.1
+typing_extensions==4.15.0
+
+# --- Serialization (used by dataclasses_json) ---
+dataclasses-json==0.6.7
+marshmallow==3.26.2
+typing-inspect==0.9.0
+mypy_extensions==1.1.0
+
+# --- Networking / async ---
+aiohttp==3.13.5
+requests==2.34.2
+tornado==6.5.5
