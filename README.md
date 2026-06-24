@@ -73,7 +73,7 @@ RAISE_ARM ──► TRACK_WHITEBOARD ──► READ_SANDPIT ──► TRACK_SAND
 |------|-------------|
 | **Wout Barrez** | Robot navigation and driving — whiteboard/sandpit tracking, mecanum base control, state machine orchestration |
 | **Wessel Toutenhoofd** | Gripper and pen — robotic arm control, inverse kinematics, sand probing, drawing trajectory execution |
-| **Sebas Atzori** | Image and text detection,  OCR text recognition, Roboflow object detection integration (but chose tesseract for final demo) |
+| **Sebas Atzori** | Image and text detection,  OCR text recognition, Roboflow object detection integration (but chose tesseract for final demo). I created the add-webcam-ocr branch with the code from the oral exam |
 
 ---
 
